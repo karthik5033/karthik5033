@@ -5,9 +5,9 @@
 
 # 💻 Tech Stack:
 
+
 <br>
-<br>
-programming languages :-
+<h2></h2>Programming languages :-<h2>
 <br>
 <br>
 
@@ -30,7 +30,7 @@ Web development :-
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 <br>
 <br>
-others :-
+Others :-
 <br>
 <br>
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
