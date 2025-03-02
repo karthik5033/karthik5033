@@ -5,9 +5,8 @@
 
 # 💻 Tech Stack:
 
-
 <br>
-<h2></h2>Programming languages :-<h2>
+Programming languages :-
 <br>
 <br>
 
