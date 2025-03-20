@@ -1,6 +1,6 @@
 # 💫 About Me:
 <br>## I am new to coding <br>
-<br>## 🌱 I’m currently learning :-<br>-   DSA in C++.<br>- Full Stack Web Development (HTML, CSS, JavaScript,MongoDB , React, Node.js).<br>- Exploring Generative AI and neural networks.<br><br>##  🌱I’m looking to collaborate on:-<br>- Full-stack web development projects.<br>- Hackathon projects.<br>- AI and machine learning applications.<br><br>## 🤔 I’m looking for help with<br>- Advanced machine learning topics (e.g., neural networks).<br>- Full-stack project development (if you have any tips or tools to recommend).<br><br>## 
+<br>## 🌱 I’m currently learning :-<br>-   DSA in C++.<br>- Full Stack Web Development (HTML, CSS, JavaScript,MongoDB , React, Node.js).<br>- Looking forward to explore Generative AI and neural networks.<br><br>##  🌱I’m looking to collaborate on:-<br>- Full-stack web development projects.<br>- Hackathon projects.<br>- AI and machine learning applications.<br><br>## 🤔 I’m looking for help with<br>- Advanced machine learning topics (e.g., neural networks).<br>- Full-stack project development (if you have any tips or tools to recommend).<br><br>## 
 
 
 # 💻 Tech Stack:
