@@ -1,6 +1,45 @@
-# 💫 About Me:
 
-<br>## 🌱 I’m currently learning :-<br>-   DSA in C++.<br>- Full Stack Web Development (HTML, CSS, JavaScript,MongoDB , React, Node.js).<br>- Looking forward to explore Generative AI and neural networks.<br><br>##  🌱I’m looking to collaborate on:-<br>- Full-stack web development projects.<br>- Hackathon projects.<br>- AI and machine learning applications.<br><br>## 🤔 I’m looking for help with<br>- Advanced machine learning topics (e.g., neural networks).<br>- Full-stack project development (if you have any tips or tools to recommend).<br><br>## 
+<div align="center" style="font-family: 'Fira Code', monospace; color: #00ccff;">
+
+<h1 style="font-size: 3.5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 4px #0088cc;">
+<div align="center" style="font-family: 'Fira Code', monospace; color: #00ccff;">
+
+<h1 style="font-size: 3.5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 4px #0088cc;">
+  🌱 About Me 🌱
+</h1>
+
+<!-- Static heading SVG no loop -->
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=100&pause=100000&center=true&vCenter=true&width=700&lines=Currently+learning:"
+  alt="Currently learning heading"
+  style="margin-bottom: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
+/>
+
+<!-- Looping subheading SVG for learning topics -->
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=5000&pause=1000&center=true&vCenter=true&width=700&loop=true&lines=DSA+in+C%2B%2B;Full+Stack+Web+Development;Generative+AI+and+Neural+Networks"
+  alt="Learning subtopics"
+  style="margin-bottom: 1em; filter: drop-shadow(1px 1px 2px #005577);"
+/>
+
+<!-- Static heading SVG no loop -->
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=100&pause=100000&center=true&vCenter=true&width=700&lines=Looking+to+collaborate+on:"
+  alt="Looking to collaborate heading"
+  style="margin-bottom: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
+/>
+
+<!-- Looping subheading SVG for collaboration topics -->
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=5000&pause=1000&center=true&vCenter=true&width=700&loop=true&lines=Full-stack+web+projects;Hackathons;AI+application+projects"
+  alt="Collaboration subtopics"
+  style="margin-top: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
+/>
+
+</div>
+
+
+
 
 
 # 💻 Tech Stack:
