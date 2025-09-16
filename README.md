@@ -8,6 +8,9 @@
   🌱 About Me 🌱
 </h1>
 
+
+
+
 <!-- Static heading SVG no loop -->
 <img 
   src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=100&pause=100000&center=true&vCenter=true&width=700&lines=Currently+learning:"
@@ -35,6 +38,12 @@
   alt="Collaboration subtopics"
   style="margin-top: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
 />
+
+<img 
+  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThkYWY1dTcwOXd5ZmpndnE0bDUzZzB0NGJ5NnZxbjZ1bW4yZm43bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8P4bnTyGQykuHxhWOm/giphy.gif" 
+  alt="gif"
+  height="2500"
+  width="3500">
 
 </div>
 
