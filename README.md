@@ -1,4 +1,4 @@
-
+. 
 <div align="center" style="font-family: 'Fira Code', monospace; color: #00ccff;">
 
 <h1 style="font-size: 3.5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 4px #0088cc;">
