@@ -42,8 +42,8 @@
 <img 
   src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThkYWY1dTcwOXd5ZmpndnE0bDUzZzB0NGJ5NnZxbjZ1bW4yZm43bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8P4bnTyGQykuHxhWOm/giphy.gif" 
   alt="gif"
-  height="2500"
-  width="3500">
+  height="500"
+  width="500">
 
 </div>
 
