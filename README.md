@@ -36,8 +36,8 @@
 />
 
 <img 
-  src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/structure.gif" 
-  alt="Abstract Network Animation"
+  src="https://media.giphy.com/media/26tn33aiOj58rDbc4/giphy.gif" 
+  alt="Technological Innovation"
   width="100%"
   style="border-radius: 10px; margin-top: 10px;">
 
