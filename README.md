@@ -36,8 +36,8 @@
 />
 
 <img 
-  src="https://media.giphy.com/media/26tn33aiOj58rDbc4/giphy.gif" 
-  alt="Technological Innovation"
+  src="./assets/space-17873.gif" 
+  alt="Space Animation"
   width="100%"
   style="border-radius: 10px; margin-top: 10px;">
 
