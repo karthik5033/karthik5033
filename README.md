@@ -36,8 +36,8 @@
 />
 
 <img 
-  src="./assets/formal_tech_banner.png" 
-  alt="Technology Architecture"
+  src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/structure.gif?raw=true" 
+  alt="Abstract Network Animation"
   width="100%"
   style="border-radius: 10px; margin-top: 10px;">
 
