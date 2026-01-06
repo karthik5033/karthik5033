@@ -36,7 +36,7 @@
 />
 
 <img 
-  src="https://github.com/ABSphreak/ABSphreak/blob/master/gifs/structure.gif?raw=true" 
+  src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/structure.gif" 
   alt="Abstract Network Animation"
   width="100%"
   style="border-radius: 10px; margin-top: 10px;">
