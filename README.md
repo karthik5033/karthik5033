@@ -11,10 +11,10 @@
 <div align="center">
   
   <!-- Currently Learning Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1000&color=26C6DA&center=true&vCenter=true&width=800&lines=🧠+Exploring+Generative+AI+%26+LLMs;🏗️+Architecting+Scalable+Cloud+Systems;⚡+Mastering+Advanced+Algorithms" alt="Currently Learning" style="margin-bottom: 10px;" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3000&pause=1000&color=26C6DA&center=true&vCenter=true&width=800&lines=Exploring+Generative+AI+and+LLMs;Architecting+Scalable+Cloud+Systems;Mastering+Advanced+Algorithms" alt="Currently Learning" style="margin-bottom: 10px;" />
 
   <!-- Collaborating Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1000&color=F06292&center=true&vCenter=true&width=800&lines=🤝+Building+AI-Powered+SaaS+Solutions;💡+Creating+High-Impact+Open+Source+Tools;🚀+Hacking+on+Global+Innovation+Projects" alt="Collaborating" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&duration=3000&pause=1000&color=F06292&center=true&vCenter=true&width=800&lines=Building+AI+Powered+SaaS+Solutions;Creating+High+Impact+Open+Source+Tools;Hacking+on+Global+Innovation+Projects" alt="Collaborating" />
 
 </div>
 
