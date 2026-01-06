@@ -7,33 +7,21 @@
   🌱 About Me 🌱
 </h1>
 
-<!-- Static heading SVG no loop -->
-<img 
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=100&pause=100000&center=true&vCenter=true&width=700&lines=Currently+learning:"
-  alt="Currently learning heading"
-  style="margin-bottom: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
-/>
+<!-- Dynamic Learning & Collaboration Section -->
+<div align="center">
+  
+  <!-- Currently Learning Animation -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1000&color=26C6DA&center=true&vCenter=true&width=800&lines=🧠+Exploring+Generative+AI+%26+LLMs;🏗️+Architecting+Scalable+Cloud+Systems;⚡+Mastering+Advanced+Algorithms" alt="Currently Learning" style="margin-bottom: 10px;" />
 
-<!-- Looping subheading SVG for learning topics -->
-<img 
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=5000&pause=1000&center=true&vCenter=true&width=700&loop=true&lines=DSA+in+C%2B%2B;Full+Stack+Web+Development;Generative+AI+and+Neural+Networks"
-  alt="Learning subtopics"
-  style="margin-bottom: 1em; filter: drop-shadow(1px 1px 2px #005577);"
-/>
+  <!-- Collaborating Animation -->
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&duration=3000&pause=1000&color=F06292&center=true&vCenter=true&width=800&lines=🤝+Building+AI-Powered+SaaS+Solutions;💡+Creating+High-Impact+Open+Source+Tools;🚀+Hacking+on+Global+Innovation+Projects" alt="Collaborating" />
 
-<!-- Static heading SVG no loop -->
-<img 
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=100&pause=100000&center=true&vCenter=true&width=700&lines=Looking+to+collaborate+on:"
-  alt="Looking to collaborate heading"
-  style="margin-bottom: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
-/>
+</div>
 
-<!-- Looping subheading SVG for collaboration topics -->
-<img 
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=5000&pause=1000&center=true&vCenter=true&width=700&loop=true&lines=Full-stack+web+projects;Hackathons;AI+application+projects"
-  alt="Collaboration subtopics"
-  style="margin-top: 0.3em; filter: drop-shadow(1px 1px 2px #005577);"
-/>
+<!-- Space Themed Title Animation -->
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=35&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&width=800&lines=Welcome+to+My+Digital+Space;Exploring+the+Infinite+Loop;Architecting+the+Future" alt="Space Title" style="margin-bottom: -20px;" />
+</a>
 
 <img 
   src="./assets/space-17873.gif" 
