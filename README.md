@@ -36,8 +36,8 @@
 />
 
 <img 
-  src="./assets/programmer_cat.png" 
-  alt="Programmer Cat"
+  src="./assets/formal_tech_banner.png" 
+  alt="Technology Architecture"
   width="100%"
   style="border-radius: 10px; margin-top: 10px;">
 
