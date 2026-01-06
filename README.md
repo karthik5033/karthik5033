@@ -7,16 +7,7 @@
   🌱 About Me 🌱
 </h1>
 
-<!-- Dynamic Learning & Collaboration Section -->
-<div align="center">
-  
-  <!-- Currently Learning Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=26C6DA&center=true&vCenter=true&width=800&lines=DSA+in+C%2B%2B;Full+Stack+Web+Development;Generative+AI+and+Neural+Networks" alt="Currently Learning" style="margin-bottom: 10px;" />
 
-  <!-- Collaborating Animation -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=F06292&center=true&vCenter=true&width=800&lines=Full-stack+web+projects;Hackathons;AI+application+projects" alt="Collaborating" />
-
-</div>
 
 
 <img 
