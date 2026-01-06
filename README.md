@@ -18,10 +18,6 @@
 
 </div>
 
-<!-- Space Themed Title Animation -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=35&duration=3000&pause=1000&color=60A5FA&center=true&vCenter=true&width=800&lines=Welcome+to+My+Digital+Space;Exploring+the+Infinite+Loop;Architecting+the+Future" alt="Space Title" style="margin-bottom: -20px;" />
-</a>
 
 <img 
   src="./assets/prof.gif" 
