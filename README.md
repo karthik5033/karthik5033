@@ -1,4 +1,3 @@
-
 <div align="center" style="font-family: 'Fira Code', monospace; color: #00ccff;">
 
 <h1 style="font-size: 3.5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 4px #0088cc;">
@@ -7,9 +6,6 @@
 <h1 style="font-size: 3.5em; font-weight: 900; margin-bottom: 0.2em; text-shadow: 2px 2px 4px #0088cc;">
   🌱 About Me 🌱
 </h1>
-
-
-
 
 <!-- Static heading SVG no loop -->
 <img 
@@ -40,22 +36,33 @@
 />
 
 <img 
-  src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThkYWY1dTcwOXd5ZmpndnE0bDUzZzB0NGJ5NnZxbjZ1bW4yZm43bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8P4bnTyGQykuHxhWOm/giphy.gif" 
-  alt="gif"
-  height="500"
-  width="500">
+  src="./assets/programmer_cat.png" 
+  alt="Programmer Cat"
+  width="100%"
+  style="border-radius: 10px; margin-top: 10px;">
 
 </div>
 
+<br/>
+<div align="center">
 
+### 📫 Connect with me:
+<p align="center">
+<a href="mailto:karthik5033@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://linkedin.com/in/karthik5033"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://instagram.com/karthik.5033"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
+<a href="https://twitter.com/karthik5033"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/></a>
+</p>
 
+</div>
+<br/>
 
+<div align="center">
 
 # 💻 Tech Stack:
 
 <br>
-Programming languages :-
-<br>
+<h3>Programming languages</h3>
 <br>
 
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
@@ -66,9 +73,7 @@ Programming languages :-
 <br>
 <br>
 
-
-Web development :-
-<br>
+<h3>Web development</h3>
 <br>
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -95,16 +100,19 @@ Web development :-
 ![GIT](https://img.shields.io/badge/Git-F05032.svg?style=for-the-badge&logo=Git&logoColor=white)
 ![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 
+</div>
+
+<br/>
+
+<div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/karthik5033/snk/refs/heads/output/github-contribution-grid-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/karthik5033/snk/refs/heads/output/github-contribution-grid-snake.svg" />
   <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/karthik5033/snk/refs/heads/output/github-contribution-grid-snake.svg" />
 </picture>
+</div>
 
-
-
-
-
+<div align="center">
 
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=karthik5033&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
@@ -117,4 +125,4 @@ Web development :-
 ---
 [![](https://visitcount.itsvg.in/api?id=karthik5033&icon=0&color=0)](https://visitcount.itsvg.in)
 
-
+</div>
