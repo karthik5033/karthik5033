@@ -21,15 +21,15 @@
 <br/>
 <div align="center">
 
-### Hi, I'm Karthik! 👋
+### Hi, Welcome to my profile! 
 
 I am a passionate developer currently focusing on **Full Stack Web Development** and exploring the world of **Generative AI**. 
 
 <div align="left">
 
-- 🔭 **Working on:** Building modern web applications and integrating AI models.
-- 🌱 **Learning:** Mastering **Data Structures & Algorithms (DSA)** in **C++** to strengthen my problem-solving core.
-- 👯 **Collaborating:** I'm looking to work on innovative **AI projects**, **Hackathons**, and **Open Source** contributions.
+-  **Working on:** Building modern web applications and integrating AI models.
+-  **Learning:** Mastering **Data Structures & Algorithms (DSA)** in **C++** to strengthen my problem-solving core.
+-  **Collaborating:** I'm looking to work on innovative **AI projects**, **Hackathons**, and **Open Source** contributions.
 
 </div>
 </div>
@@ -56,18 +56,13 @@ I am a passionate developer currently focusing on **Full Stack Web Development**
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![DaisyUI](https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Ant-Design](https://img.shields.io/badge/-AntDesign-%230170FE?style=for-the-badge&logo=ant-design&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF.svg?style=for-the-badge&logo=Vite&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![NextJS](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Bun](https://img.shields.io/badge/Bun-000000.svg?style=for-the-badge&logo=Bun&logoColor=white)
 
 ![Postman](https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=Postman&logoColor=white)
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000.svg?style=for-the-badge&logo=Mongoose&logoColor=white)
