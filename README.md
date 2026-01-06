@@ -27,9 +27,9 @@ I am a passionate developer currently focusing on **Full Stack Web Development**
 
 <div align="left">
 
--  **Working on:** Building modern web applications and integrating AI models.
--  **Learning:** Mastering **Data Structures & Algorithms (DSA)** in **C++** to strengthen my problem-solving core.
--  **Collaborating:** I'm looking to work on innovative **AI projects**, **Hackathons**, and **Open Source** contributions.
+-  🌱 **Working on:** Building modern web applications and integrating AI models.
+-  🌱**Learning:** Mastering **Data Structures & Algorithms (DSA)** in **C++** to strengthen my problem-solving core.
+-  🌱**Collaborating:** I'm looking to work on innovative **AI projects**, **Hackathons**, and **Open Source** contributions.
 
 </div>
 </div>
