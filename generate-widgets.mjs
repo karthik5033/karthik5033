@@ -71,7 +71,7 @@ function generateTrophiesSVG(user) {
   ];
 
   const ranks = ["C", "B", "A", "S", "SS", "SSS"];
-  const colors = ["#6e6e6e", "#4caf50", "#2196f3", "#ff9800", "#f44336", "#9c27b0"];
+  const colors = ["#6e6e6e", "#8B7335", "#B8960C", "#DAB20A", "#FFD93D", "#FFF176"];
 
   let cards = "";
   trophies.forEach((t, i) => {
@@ -107,8 +107,8 @@ function generateGridSVG(user) {
   const ROWS = 7;
   const OFFSET_X = 35;
   const OFFSET_Y = 25;
-  const SNAKE_COLOR = "#FF6B35";
-  const TIERS = ["#0e4429", "#006d32", "#26a641", "#39d353"];
+  const SNAKE_COLOR = "#FFD93D";
+  const TIERS = ["#4a3700", "#7a5f00", "#C49B00", "#FFD93D"];
 
   // Build grid data
   const grid = Array.from({ length: COLS }, () => 
@@ -119,10 +119,10 @@ function generateGridSVG(user) {
     week.contributionDays.forEach((day, dIdx) => {
       let color = "#161b22";
       const count = day.contributionCount;
-      if (count === 1) color = "#0e4429";
-      if (count > 1 && count <= 3) color = "#006d32";
-      if (count > 3 && count <= 5) color = "#26a641";
-      if (count > 5) color = "#39d353";
+      if (count === 1) color = "#4a3700";
+      if (count > 1 && count <= 3) color = "#7a5f00";
+      if (count > 3 && count <= 5) color = "#C49B00";
+      if (count > 5) color = "#FFD93D";
       if (dIdx < ROWS) {
         grid[wIdx][dIdx] = { color, filled: count > 0, count };
       }
@@ -270,10 +270,16 @@ function generateGridSVG(user) {
         if (idx !== undefined) {
           const frac = idx / totalSteps;
           const arrPct = (frac * 100).toFixed(2);
-          const hidePct = Math.min(frac * 100 + 0.3, 94).toFixed(2);
+          const hidePct = (frac * 100 + 0.2).toFixed(2);
           const cls = `c${cellId}`;
           cellStyles += `.${cls}{animation:k${cellId} ${DUR}s linear infinite}`;
-          cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}95%{opacity:0}98%{opacity:1}100%{opacity:1}}`;
+          // Cells reappear in last 0.5% of cycle. At 100%→0% wrap, opacity:1 is already set.
+          if (parseFloat(hidePct) < 99.0) {
+            cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}99%{opacity:0}99.5%{opacity:1}100%{opacity:1}}`;
+          } else {
+            // Eaten very late — hide briefly, opacity:1 at 0% handles the reset on loop
+            cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}100%{opacity:0}}`;
+          }
           gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}" class="${cls}"/>`;
           cellId++;
         } else {
@@ -328,7 +334,7 @@ function generateGridSVG(user) {
         </g>
       </g>
       <text x="${OFFSET_X}" y="15" font-family="'Press Start 2P', monospace" font-size="10" fill="${SNAKE_COLOR}" filter="drop-shadow(0 0 2px ${SNAKE_COLOR})">> SNAKE_EATING</text>
-      <text x="763" y="15" font-family="'Press Start 2P', monospace" font-size="10" fill="#39d353" text-anchor="end">${user.contributionsCollection.contributionCalendar.totalContributions} COMMITS</text>
+      <text x="763" y="15" font-family="'Press Start 2P', monospace" font-size="10" fill="#FFD93D" text-anchor="end">${user.contributionsCollection.contributionCalendar.totalContributions} COMMITS</text>
     </svg>
   `;
 }

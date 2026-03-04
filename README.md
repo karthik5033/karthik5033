@@ -43,7 +43,7 @@
 </div>
 
 <!-- ANIMATED WAVE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=gradient&customColorList=6,11,20&section=header"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:FFD93D,50:FFC107,100:FF9800&section=header"/>
 
 ## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
 
@@ -241,12 +241,12 @@ currently:
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="https://streak-stats.demolab.com?user=karthik5033&theme=radical&hide_border=true&background=0D1117&stroke=00CCFF&ring=F8D866&fire=F8D866&currStreakLabel=00CCFF" width="70%"/>
+<img src="https://streak-stats.demolab.com?user=karthik5033&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E" width="70%"/>
 
 <br/><br/>
 
 <!-- ACTIVITY GRAPH -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=karthik5033&bg_color=0D1117&color=00CCFF&line=F8D866&point=FFFFFF&area_color=0D1117&area=true&hide_border=true&custom_title=Contribution%20Graph" width="95%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=karthik5033&bg_color=0D1117&color=FFD93D&line=FFD93D&point=FFFFFF&area_color=FFA726&area=true&hide_border=true&custom_title=🍌%20Contribution%20Graph" width="95%"/>
 
 </div>
 

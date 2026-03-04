@@ -173,7 +173,7 @@ function generateSVG(stats) {
         <!-- CRT Scanline Effect Overlay -->
         <rect x="0" y="0" width="380" height="340" fill="url(#scanlines)" opacity="0.3"/>
         
-        <text x="20" y="30" class="rpg-title blink-slow" filter="drop-shadow(0 0 5px #00FF9D)">PLAYER 1 START</text>
+        <text x="20" y="30" class="rpg-title blink-slow" filter="drop-shadow(0 0 5px #FFD93D)">PLAYER 1 START</text>
         <text x="20" y="70" class="rpg-text">CHAR : ${stats.name.toUpperCase()}</text>
         <text x="20" y="100" class="rpg-class">CLASS: WEB WIZARD</text>
         <text x="20" y="130" class="rpg-level">LVL  : ${stats.followers || 1}</text>
@@ -186,9 +186,9 @@ function generateSVG(stats) {
         </rect>
 
         <!-- EXP Bar -->
-        <text x="20" y="200" class="rpg-stat" fill="#00CCFF">XP</text>
+        <text x="20" y="200" class="rpg-stat" fill="#FFD93D">XP</text>
         <rect x="60" y="188" width="220" height="14" fill="#222" stroke="#FFF" stroke-width="2"/>
-        <rect x="60" y="188" width="0" height="14" fill="#00CCFF">
+        <rect x="60" y="188" width="0" height="14" fill="#FFD93D">
           <animate attributeName="width" from="0" to="${finalProgWidth}" dur="1.5s" fill="freeze" />
         </rect>
         <text x="295" y="200" class="rpg-small-text">${stats.totalContributions}/${targetCommits}</text>
@@ -218,7 +218,7 @@ function generateSVG(stats) {
            <rect x="10" y="50" width="5" height="5" fill="#FFF"/>
 
            <!-- Blade interior -->
-           <path d="M 25 20 L 40 5 L 45 10 L 30 25 Z" fill="#00CCFF"/>
+           <path d="M 25 20 L 40 5 L 45 10 L 30 25 Z" fill="#FFD93D"/>
            <!-- Sword Hilt -->
            <rect x="15" y="30" width="5" height="5" fill="#F8D866"/>
            <rect x="5" y="40" width="5" height="5" fill="#F8D866"/>
@@ -243,10 +243,10 @@ function generateSVG(stats) {
             filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5));
           }
 
-          .rpg-title { font-family: 'Press Start 2P', monospace; font-size: 16px; fill: #00FF9D; }
+          .rpg-title { font-family: 'Press Start 2P', monospace; font-size: 16px; fill: #FFD93D; }
           .rpg-text { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFFFFF; }
           .rpg-class { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #F8D866; text-shadow: 0 0 5px rgba(248,216,102,0.4); }
-          .rpg-level { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #00CCFF; }
+          .rpg-level { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFD93D; }
           .rpg-stat { font-family: 'Press Start 2P', monospace; font-size: 12px; }
           .rpg-small-text { font-family: 'Press Start 2P', monospace; font-size: 8px; fill: #FFFFFF; }
           
