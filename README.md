@@ -53,17 +53,24 @@
 
 ```yaml
 name: Karthik
-location: India 🇮🇳
+location: Bangalore, India 🇮🇳
 current_focus: Full Stack Web Dev + Generative AI
-education: Computer Science Student
+education: Computer Science @ RVCE (ISE-28)
 passion: Building AI-powered applications
 
 currently:
   🔭 building: Modern web apps with AI integration
   🌱 learning: DSA in C++ | System Design
   👯 seeking: Hackathons & Open Source collabs
+  🍌 motto: "Bello!" — ship fast, break nothing
   ⚡ fun_fact: I debug with console.log and I'm proud of it 😄
 ```
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=karthik5033&style=for-the-badge&color=FFD93D&label=PROFILE+VIEWS" alt="Profile Views"/>
+</p>
+
+> 🍌 *"Do you know the Muffin Man?"* — Every Minion ever
 
 </td>
 <td width="40%" valign="top" align="center">
