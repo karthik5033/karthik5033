@@ -1,0 +1,22 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .pulse { animation: pulse 2.5s infinite; transform-origin: center; }
+      .rotate { animation: rotate 15s linear infinite; transform-origin: 50px 50px; }
+      .float { animation: float 4s ease-in-out infinite; }
+      @keyframes pulse { 0% { filter: drop-shadow(0 0 2px #00CCFF); transform: scale(0.95); } 50% { filter: drop-shadow(0 0 10px #00CCFF); transform: scale(1.05); } 100% { filter: drop-shadow(0 0 2px #00CCFF); transform: scale(0.95); } }
+      @keyframes rotate { 100% { transform: rotate(360deg); } }
+      @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    </style>
+  </defs>
+  <g class="float">
+    <g class="pulse">
+      <path class="rotate" d="M50 15 L80 32.5 L80 67.5 L50 85 L20 67.5 L20 32.5 Z" stroke="#00CCFF" stroke-width="3" stroke-dasharray="10 5" fill="rgba(0,204,255,0.05)"/>
+      <circle cx="50" cy="50" r="12" fill="none" stroke="#F8D866" stroke-width="2"/>
+      <circle cx="50" cy="50" r="6" fill="#F8D866" filter="drop-shadow(0 0 5px #F8D866)"/>
+      <line x1="50" y1="50" x2="80" y2="32.5" stroke="#F8D866" stroke-width="2"/>
+      <line x1="50" y1="50" x2="20" y2="32.5" stroke="#F8D866" stroke-width="2"/>
+      <line x1="50" y1="50" x2="50" y2="85" stroke="#F8D866" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

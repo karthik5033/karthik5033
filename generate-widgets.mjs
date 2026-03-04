@@ -1,0 +1,354 @@
+import "dotenv/config";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const GITHUB_TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const USERNAME = "karthik5033";
+
+async function fetchStats() {
+  const query = `{
+    user(login: "${USERNAME}") {
+      repositories(first: 100, ownerAffiliations: OWNER, orderBy: {field: STARGAZERS, direction: DESC}) {
+        totalCount
+        nodes { name stargazerCount primaryLanguage { name } }
+      }
+      contributionsCollection {
+        totalCommitContributions
+        restrictedContributionsCount
+        contributionCalendar {
+          totalContributions
+          weeks {
+            contributionDays {
+              contributionCount
+              date
+            }
+          }
+        }
+      }
+      followers { totalCount }
+      following { totalCount }
+      pullRequests(first: 1) { totalCount }
+      issues(first: 1) { totalCount }
+    }
+  }`;
+
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: { Authorization: `bearer ${GITHUB_TOKEN}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ query }),
+  });
+
+  const json = await res.json();
+  if (!json.data || !json.data.user) {
+    console.error("API Error or Missing Data:", JSON.stringify(json, null, 2));
+    throw new Error("Failed to fetch user data.");
+  }
+  return json.data.user;
+}
+
+// Generates custom trophies SVG
+function generateTrophiesSVG(user) {
+  const stats = {
+    stars: user.repositories.nodes.reduce((sum, r) => sum + r.stargazerCount, 0),
+    commits: user.contributionsCollection.totalCommitContributions + user.contributionsCollection.restrictedContributionsCount,
+    prs: user.pullRequests.totalCount,
+    issues: user.issues.totalCount,
+    repos: user.repositories.totalCount,
+    followers: user.followers.totalCount,
+  };
+
+  const trophies = [
+    { icon: "⭐", label: "Stars", value: stats.stars, thresholds: [1, 10, 50, 100, 500] },
+    { icon: "🔥", label: "Commits", value: stats.commits, thresholds: [10, 100, 500, 1000, 5000] },
+    { icon: "🔀", label: "PRs", value: stats.prs, thresholds: [1, 10, 50, 100, 500] },
+    { icon: "❗", label: "Issues", value: stats.issues, thresholds: [1, 10, 50, 100, 500] },
+    { icon: "📦", label: "Repos", value: stats.repos, thresholds: [1, 10, 30, 50, 100] },
+    { icon: "👥", label: "Followers", value: stats.followers, thresholds: [1, 10, 50, 100, 500] },
+  ];
+
+  const ranks = ["C", "B", "A", "S", "SS", "SSS"];
+  const colors = ["#6e6e6e", "#4caf50", "#2196f3", "#ff9800", "#f44336", "#9c27b0"];
+
+  let cards = "";
+  trophies.forEach((t, i) => {
+    let rank = 0;
+    for (const th of t.thresholds) { if (t.value >= th) rank++; }
+    const x = (i % 6) * 130 + 10;
+    const y = Math.floor(i / 6) * 120 + 10;
+    cards += `
+      <g transform="translate(${x}, ${y})">
+        <rect width="120" height="100" rx="8" fill="#161b22" stroke="${colors[rank]}" stroke-width="2"/>
+        <text x="60" y="28" text-anchor="middle" font-size="22">${t.icon}</text>
+        <text x="60" y="50" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="11" fill="${colors[rank]}" font-weight="bold">${ranks[rank]}</text>
+        <text x="60" y="68" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#8b949e">${t.label}</text>
+        <text x="60" y="85" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="12" fill="#c9d1d9" font-weight="bold">${t.value}</text>
+      </g>
+    `;
+  });
+
+  return `
+    <svg width="800" height="130" viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="800" height="130" fill="transparent"/>
+      ${cards}
+    </svg>
+  `;
+}
+
+// Generates the Contribution Grid SVG with animated snake
+function generateGridSVG(user) {
+  const weeks = user.contributionsCollection.contributionCalendar.weeks;
+  const CELL = 14;
+  const SIZE = 11;
+  const COLS = weeks.length;
+  const ROWS = 7;
+  const OFFSET_X = 35;
+  const OFFSET_Y = 25;
+  const SNAKE_COLOR = "#FF6B35";
+  const TIERS = ["#0e4429", "#006d32", "#26a641", "#39d353"];
+
+  // Build grid data
+  const grid = Array.from({ length: COLS }, () => 
+    Array.from({ length: ROWS }, () => ({ color: "#161b22", filled: false, count: 0 }))
+  );
+
+  weeks.forEach((week, wIdx) => {
+    week.contributionDays.forEach((day, dIdx) => {
+      let color = "#161b22";
+      const count = day.contributionCount;
+      if (count === 1) color = "#0e4429";
+      if (count > 1 && count <= 3) color = "#006d32";
+      if (count > 3 && count <= 5) color = "#26a641";
+      if (count > 5) color = "#39d353";
+      if (dIdx < ROWS) {
+        grid[wIdx][dIdx] = { color, filled: count > 0, count };
+      }
+    });
+  });
+
+  // Build Dijkstra-based cell-by-cell pathfinding to ensure we never move over uneaten cells
+  const eaten = Array.from({ length: COLS }, () => Array(ROWS).fill(false));
+  let toEat = 0;
+  for (let c = 0; c < COLS; c++) {
+    for (let r = 0; r < ROWS; r++) {
+      if (grid[c][r].filled) toEat++;
+    }
+  }
+
+  const pathPoints = []; // discrete cell-by-cell steps
+  // Start at either first filled cell, or (0,0)
+  let curPos = { c: 0, r: 0 };
+  let startFound = false;
+  for (let c = 0; c < COLS && !startFound; c++) {
+    for (let r = 0; r < ROWS && !startFound; r++) {
+      if (grid[c][r].filled) {
+        curPos = { c, r };
+        startFound = true;
+      }
+    }
+  }
+
+  pathPoints.push(curPos);
+  const eatMap = {}; // "c_r" -> index in pathPoints where it is eaten
+
+  if (grid[curPos.c][curPos.r].filled) {
+    eaten[curPos.c][curPos.r] = true;
+    eatMap[`${curPos.c}_${curPos.r}`] = 0;
+    toEat--;
+  }
+
+  while (toEat > 0) {
+    // 1. Find target tier: the minimum tier among remaining uneaten cells
+    let minTier = 5;
+    for (let c = 0; c < COLS; c++) {
+      for (let r = 0; r < ROWS; r++) {
+        if (grid[c][r].filled && !eaten[c][r]) {
+          let count = grid[c][r].count;
+          let tier = count === 1 ? 1 : (count <= 3 ? 2 : (count <= 5 ? 3 : 4));
+          if (tier < minTier) minTier = tier;
+        }
+      }
+    }
+
+    // 2. Dijkstra to nearest target
+    const dist = Array.from({ length: COLS }, () => Array(ROWS).fill(Infinity));
+    const parent = Array.from({ length: COLS }, () => Array(ROWS).fill(null));
+    dist[curPos.c][curPos.r] = 0;
+    
+    // Simple priority queue logic using an array
+    const pq = [];
+    pq.push({ c: curPos.c, r: curPos.r, d: 0 });
+    let bestTarget = null;
+
+    while (pq.length > 0) {
+      pq.sort((a, b) => a.d - b.d);
+      const u = pq.shift();
+      if (dist[u.c][u.r] < u.d) continue;
+
+      let countU = grid[u.c][u.r].count;
+      let tierU = countU === 1 ? 1 : (countU <= 3 ? 2 : (countU <= 5 ? 3 : 4));
+
+      // Is it a target?
+      if (grid[u.c][u.r].filled && !eaten[u.c][u.r] && tierU === minTier) {
+        bestTarget = u;
+        break; // nearest target found!
+      }
+
+      const neighbors = [
+        { c: u.c + 1, r: u.r }, { c: u.c - 1, r: u.r },
+        { c: u.c, r: u.r + 1 }, { c: u.c, r: u.r - 1 }
+      ];
+
+      for (const n of neighbors) {
+        if (n.c >= 0 && n.c < COLS && n.r >= 0 && n.r < ROWS) {
+          let cost = 1; // base distance
+          if (grid[n.c][n.r].filled && !eaten[n.c][n.r]) {
+            let countN = grid[n.c][n.r].count;
+            let tierN = countN === 1 ? 1 : (countN <= 3 ? 2 : (countN <= 5 ? 3 : 4));
+            // Penalize moving across an uneaten cell heavily (unless it's our target tier)
+            if (tierN === minTier) cost = 1;
+            else cost = 100 * tierN;
+          }
+          if (dist[u.c][u.r] + cost < dist[n.c][n.r]) {
+            dist[n.c][n.r] = dist[u.c][u.r] + cost;
+            parent[n.c][n.r] = u;
+            pq.push({ c: n.c, r: n.r, d: dist[n.c][n.r] });
+          }
+        }
+      }
+    }
+
+    if (!bestTarget) break; // Should not happen
+
+    // Reconstruct path
+    const route = [];
+    let curr = bestTarget;
+    while (curr.c !== curPos.c || curr.r !== curPos.r) {
+      route.push({ c: curr.c, r: curr.r });
+      curr = parent[curr.c][curr.r];
+    }
+    route.reverse(); // Now from curPos (exclusive) to bestTarget (inclusive)
+
+    // Move snake along route, eating anything filling
+    for (const step of route) {
+      pathPoints.push(step);
+      if (grid[step.c][step.r].filled && !eaten[step.c][step.r]) {
+        eaten[step.c][step.r] = true;
+        toEat--;
+        eatMap[`${step.c}_${step.r}`] = pathPoints.length - 1;
+      }
+    }
+    curPos = { c: bestTarget.c, r: bestTarget.r };
+  }
+
+  // Generate SVG path string
+  let pathD = '';
+  pathPoints.forEach((p, i) => {
+    const cx = p.c * CELL + SIZE / 2;
+    const cy = p.r * CELL + SIZE / 2;
+    pathD += i === 0 ? `M ${cx} ${cy}` : ` L ${cx} ${cy}`;
+  });
+
+  // Duration = full cycle
+  const DUR = 60;
+  let totalSteps = pathPoints.length - 1;
+  if (totalSteps <= 0) totalSteps = 1;
+
+  // Per-cell keyframes: hide exactly at arrival, reappear at 96%
+  let cellStyles = '';
+  let gridHtml = '';
+  let cellId = 0;
+
+  weeks.forEach((week, wIdx) => {
+    week.contributionDays.forEach((day, dIdx) => {
+      const { color, filled } = grid[wIdx][dIdx];
+      if (filled) {
+        const idx = eatMap[`${wIdx}_${dIdx}`];
+        if (idx !== undefined) {
+          const frac = idx / totalSteps;
+          const arrPct = (frac * 100).toFixed(2);
+          const hidePct = Math.min(frac * 100 + 0.3, 94).toFixed(2);
+          const cls = `c${cellId}`;
+          cellStyles += `.${cls}{animation:k${cellId} ${DUR}s linear infinite}`;
+          cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}95%{opacity:0}98%{opacity:1}100%{opacity:1}}`;
+          gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}" class="${cls}"/>`;
+          cellId++;
+        } else {
+          gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}"/>`;
+        }
+      } else {
+        gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}"/>`;
+      }
+    });
+  });
+
+  // Snake body trails behind head with positive begin delays
+  const BODY_COUNT = 8;
+  const BODY_LAG = 0.12;
+  let snakeSegments = '';
+  for (let seg = 0; seg < BODY_COUNT; seg++) {
+    const segSize = SIZE - seg * 0.8;
+    const opacity = (1 - seg * 0.08).toFixed(2);
+    const lag = ((seg + 1) * BODY_LAG).toFixed(2);
+    snakeSegments += `<rect x="${-segSize/2}" y="${-segSize/2}" width="${segSize}" height="${segSize}" rx="2" fill="${SNAKE_COLOR}" opacity="${opacity}"><animateMotion dur="${DUR}s" repeatCount="indefinite" begin="${lag}s" path="${pathD}"/></rect>`;
+  }
+
+  return `
+    <svg width="800" height="150" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+          ${cellStyles}
+        </style>
+        <filter id="snakeGlow">
+          <feGaussianBlur stdDeviation="1.5" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <pattern id="gridPattern" patternUnits="userSpaceOnUse" width="14" height="14">
+          <rect width="11" height="11" rx="2" fill="#161b22" opacity="0.3"/>
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width="800" height="150" fill="transparent"/>
+      <g transform="translate(${OFFSET_X}, ${OFFSET_Y})">
+        <rect width="${COLS * CELL}" height="${ROWS * CELL}" fill="url(#gridPattern)"/>
+        ${gridHtml}
+      </g>
+      <g transform="translate(${OFFSET_X}, ${OFFSET_Y})">
+        ${snakeSegments}
+        <g>
+          <animateMotion dur="${DUR}s" repeatCount="indefinite" path="${pathD}"/>
+          <rect x="-6.5" y="-6.5" width="13" height="13" rx="3" fill="${SNAKE_COLOR}" filter="url(#snakeGlow)"/>
+          <circle cx="-3" cy="-2" r="1.8" fill="#0D1117"/>
+          <circle cx="3" cy="-2" r="1.8" fill="#0D1117"/>
+          <circle cx="-2.5" cy="-2.5" r="0.7" fill="#FFF"/>
+          <circle cx="3.5" cy="-2.5" r="0.7" fill="#FFF"/>
+        </g>
+      </g>
+      <text x="${OFFSET_X}" y="15" font-family="'Press Start 2P', monospace" font-size="10" fill="${SNAKE_COLOR}" filter="drop-shadow(0 0 2px ${SNAKE_COLOR})">> SNAKE_EATING</text>
+      <text x="763" y="15" font-family="'Press Start 2P', monospace" font-size="10" fill="#39d353" text-anchor="end">${user.contributionsCollection.contributionCalendar.totalContributions} COMMITS</text>
+    </svg>
+  `;
+}
+
+async function run() {
+  const user = await fetchStats();
+
+  const trophiesSVG = generateTrophiesSVG(user);
+  const gridSVG = generateGridSVG(user);
+
+  const assetsDir = path.join(__dirname, "assets");
+  if (!fs.existsSync(assetsDir)) {
+    fs.mkdirSync(assetsDir);
+  }
+
+  fs.writeFileSync(path.join(assetsDir, "custom-trophies.svg"), trophiesSVG);
+  console.log("✅ Successfully generated custom-trophies.svg");
+
+  fs.writeFileSync(path.join(assetsDir, "custom-contributions.svg"), gridSVG);
+  console.log("✅ Successfully generated custom-contributions.svg");
+}
+
+run();

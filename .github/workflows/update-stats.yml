@@ -1,0 +1,38 @@
+name: Update Custom Stats SVG
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at midnight UTC every day
+  workflow_dispatch: # Allows manual trigger from the GitHub Actions tab
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci || npm install dotenv
+
+      - name: Generate the Stats SVG
+        run: node generate-stats.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in token from GitHub Actions!
+
+      - name: Generate Custom Trophies and Heatmap
+        run: node generate-widgets.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit & Push the generated SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/custom-stats.svg assets/custom-trophies.svg assets/custom-contributions.svg
+          git diff --quiet && git diff --staged --quiet || git commit -m "📈 Auto-update custom stats and matrix SVGs"
+          git push
