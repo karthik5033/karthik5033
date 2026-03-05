@@ -143,96 +143,27 @@ function generateSVG(stats) {
   }).join("");
 
   // Render Legend
-  let legendY = 205;
+  let legendY = 85;
   const legendHTML = stats.topLanguages.map((lang, idx) => {
+    // Truncate extremely long language names just in case
+    const displayName = lang.name.length > 15 ? lang.name.substring(0, 13) + '...' : lang.name;
     const html = `
       <g class="animate-item" style="animation-delay: ${idx * 150}ms">
-        <rect x="480" y="${legendY - 10}" width="12" height="12" rx="3" fill="${lang.color}"/>
-        <text x="505" y="${legendY}" class="term-key" style="font-size:13px;">${lang.name}</text>
-        <text x="750" y="${legendY}" class="term-num" style="font-size:13px;" text-anchor="end">${lang.percentage}%</text>
+        <rect x="230" y="${legendY - 10}" width="12" height="12" rx="3" fill="${lang.color}"/>
+        <text x="255" y="${legendY}" class="term-key" style="font-size:12px;">${displayName}</text>
+        <text x="395" y="${legendY}" class="term-num" style="font-size:12px;" text-anchor="end">${lang.percentage}%</text>
       </g>
     `;
-    legendY += 30;
+    legendY += 28;
     return html;
   }).join("");
 
-  // RPG Layout for Left Panel
-  const targets = [100, 500, 1000, 2000, 5000, 10000];
-  const targetCommits = targets.find(t => t > stats.totalContributions) || targets[targets.length-1];
-  const commitPercent = Math.min(100, (stats.totalContributions / targetCommits) * 100);
-  const finalProgWidth = (commitPercent / 100) * 220;
-  
-  const hpPercent = Math.min(100, 30 + (stats.totalRepos * 2));
-  const finalHpWidth = (hpPercent / 100) * 220;
-
-  const gameLayout = `
-      <g transform="translate(35, 30)">
-        <!-- Game Screen Inner Border -->
-        <rect x="0" y="0" width="380" height="340" rx="4" fill="#0b0e14" stroke="#444" stroke-width="2"/>
-        
-        <!-- CRT Scanline Effect Overlay -->
-        <rect x="0" y="0" width="380" height="340" fill="url(#scanlines)" opacity="0.3"/>
-        
-        <text x="20" y="30" class="rpg-title blink-slow" filter="drop-shadow(0 0 5px #FFD93D)">PLAYER 1 START</text>
-        <text x="20" y="70" class="rpg-text">CHAR : ${stats.name.toUpperCase()}</text>
-        <text x="20" y="100" class="rpg-class">CLASS: WEB WIZARD</text>
-        <text x="20" y="130" class="rpg-level">LVL  : ${stats.followers || 1}</text>
-
-        <!-- HP Bar -->
-        <text x="20" y="170" class="rpg-stat" fill="#FF3366">HP</text>
-        <rect x="60" y="158" width="220" height="14" fill="#222" stroke="#FFF" stroke-width="2"/>
-        <rect x="60" y="158" width="0" height="14" fill="#FF3366">
-          <animate attributeName="width" from="0" to="${finalHpWidth}" dur="1s" fill="freeze" />
-        </rect>
-
-        <!-- EXP Bar -->
-        <text x="20" y="200" class="rpg-stat" fill="#FFD93D">XP</text>
-        <rect x="60" y="188" width="220" height="14" fill="#222" stroke="#FFF" stroke-width="2"/>
-        <rect x="60" y="188" width="0" height="14" fill="#FFD93D">
-          <animate attributeName="width" from="0" to="${finalProgWidth}" dur="1.5s" fill="freeze" />
-        </rect>
-        <text x="295" y="200" class="rpg-small-text">${stats.totalContributions}/${targetCommits}</text>
-
-        <!-- Attributes Grid -->
-        <g class="animate-item" style="animation-delay: 500ms;">
-          <text x="20" y="250" class="rpg-text">STR (STARS) : <tspan fill="#F8D866">${stats.totalStars}</tspan></text>
-          <text x="20" y="280" class="rpg-text">INT (REPOS) : <tspan fill="#F8D866">${stats.totalRepos}</tspan></text>
-          <text x="20" y="310" class="rpg-text">AGI (FLLWS) : <tspan fill="#F8D866">${stats.followers}</tspan></text>
-        </g>
-
-        <!-- Floating 8-bit Sword Sprite -->
-        <g transform="translate(260, 230) scale(1.8)" class="float-sprite">
-           <!-- Sword outline -->
-           <rect x="0" y="40" width="5" height="5" fill="#555"/>
-           <rect x="5" y="35" width="5" height="5" fill="#555"/>
-           <rect x="10" y="30" width="5" height="5" fill="#555"/>
-           <rect x="15" y="25" width="5" height="5" fill="#555"/>
-           <rect x="20" y="20" width="5" height="5" fill="#555"/>
-           <rect x="25" y="15" width="5" height="5" fill="#555"/>
-           <rect x="30" y="10" width="5" height="5" fill="#555"/>
-           
-           <rect x="15" y="35" width="5" height="5" fill="#555"/>
-           <rect x="20" y="30" width="5" height="5" fill="#555"/>
-           
-           <rect x="5" y="45" width="5" height="5" fill="#FFF"/>
-           <rect x="10" y="50" width="5" height="5" fill="#FFF"/>
-
-           <!-- Blade interior -->
-           <path d="M 25 20 L 40 5 L 45 10 L 30 25 Z" fill="#FFD93D"/>
-           <!-- Sword Hilt -->
-           <rect x="15" y="30" width="5" height="5" fill="#F8D866"/>
-           <rect x="5" y="40" width="5" height="5" fill="#F8D866"/>
-        </g>
-      </g>
-  `;
-
-  // Construct Final SVG
+  // Construct Final SVG - 420x240 Standalone Top Languages Card
   return `
-    <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <svg width="420" height="240" viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
-          @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
           
           .bg { fill: #0D1117; }
           
@@ -242,20 +173,13 @@ function generateSVG(stats) {
             stroke-width: 1.5;
             filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5));
           }
-
-          .rpg-title { font-family: 'Press Start 2P', monospace; font-size: 16px; fill: #FFD93D; }
-          .rpg-text { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFFFFF; }
-          .rpg-class { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #F8D866; text-shadow: 0 0 5px rgba(248,216,102,0.4); }
-          .rpg-level { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFD93D; }
-          .rpg-stat { font-family: 'Press Start 2P', monospace; font-size: 12px; }
-          .rpg-small-text { font-family: 'Press Start 2P', monospace; font-size: 8px; fill: #FFFFFF; }
           
           .term-key { font-family: 'Fira Code', monospace; fill: #8B949E; font-weight: 400; }
           .term-num { font-family: 'Fira Code', monospace; fill: #c9cacc; font-weight: 400; }
 
           .title {
             font-family: 'Fira Code', monospace;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             fill: #FFFFFF;
             text-shadow: 0 0 5px rgba(255,255,255,0.2);
@@ -266,30 +190,11 @@ function generateSVG(stats) {
             animation: fadeIn 0.5s ease forwards;
           }
 
-          .blink-slow {
-            animation: blink 2s step-end infinite;
-          }
-
-          .float-sprite {
-            animation: float 3s ease-in-out infinite;
-          }
-
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
           }
-          
-          @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-          }
-
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); filter: drop-shadow(0 0 5px #00CCFF); }
-          }
         </style>
-        
         <pattern id="scanlines" patternUnits="userSpaceOnUse" width="4" height="4">
           <rect width="4" height="2" fill="#000" opacity="0.6"/>
           <rect y="2" width="4" height="2" fill="transparent"/>
@@ -297,25 +202,22 @@ function generateSVG(stats) {
       </defs>
 
       <!-- Main GitHub Background Canvas -->
-      <rect x="0" y="0" width="800" height="400" class="bg" rx="15" />
+      <rect x="0" y="0" width="420" height="240" class="bg" rx="15" />
 
-      <!-- Left Panel: RPG Game UI -->
-      <rect x="20" y="20" width="410" height="360" rx="15" class="glass-panel" />
-      ${gameLayout}
-
-      <!-- Right Panel: Top Languages Donut Chart -->
-      <rect x="450" y="20" width="330" height="360" rx="15" class="glass-panel" />
+      <!-- Top Languages Panel -->
+      <rect x="10" y="10" width="400" height="220" rx="10" class="glass-panel" />
+      <rect x="10" y="10" width="400" height="220" rx="10" fill="url(#scanlines)" opacity="0.1" />
       
-      <text x="470" y="55" class="title animate-item" style="animation-delay: 200ms;">🍩 Top Languages</text>
-      <line x1="470" y1="70" x2="760" y2="70" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="210" y="40" text-anchor="middle" class="title animate-item" style="animation-delay: 200ms;">🍩 Top Languages</text>
+      <line x1="30" y1="52" x2="390" y2="52" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
       
       <!-- Generated SVG Arcs -->
-      <g transform="translate(615, 125) rotate(-90)">
+      <g transform="translate(130, 135) rotate(-90)">
         ${arcs}
       </g>
       
       <!-- Donut Hole Text -->
-      <text x="615" y="130" text-anchor="middle" font-family="'Fira Code', monospace" font-size="14" font-weight="700" fill="#FFFFFF">Code</text>
+      <text x="130" y="140" text-anchor="middle" font-family="'Fira Code', monospace" font-size="13" font-weight="700" fill="#FFFFFF">Code</text>
 
       <!-- Language Legend List -->
       ${legendHTML}

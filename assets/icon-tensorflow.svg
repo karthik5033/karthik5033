@@ -1,0 +1,10 @@
+<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,3; 0,-3; 0,3" dur="2.6s" repeatCount="indefinite" />
+    <svg width="36" height="36" x="7" y="7">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128">
+  <path d="m61.55 128-21.84-12.68V40.55L6.81 59.56l.08-28.32L61.55 0zM66.46 0v128l21.84-12.68V79.31l16.49 9.53-.1-24.63-16.39-9.36v-14.3l32.89 19.01-.08-28.32z" fill="#ff6f00" />
+</svg>
+    </svg>
+  </g>
+</svg>

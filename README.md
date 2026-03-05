@@ -11,7 +11,7 @@
 <div align="center">
   <br/>
   <h3>🕹️ Play a Mini-Game: Find the hidden Minion!</h3>
-  <i>(GitHub blocks Javascript, so we have to hack interactivity using dropdowns!) <br/> Can you click the right box to find Bob?</i>
+  <i>Only the most curious developers will find Bob... <br/> Dare to open a mystery box?</i>
   <br/><br/>
   
   <table width="80%">
@@ -57,7 +57,6 @@ location: Bangalore, India 🇮🇳
 current_focus: Full Stack Web Dev + Generative AI
 education: Computer Science @ RVCE (ISE-28)
 passion: Building AI-powered applications
-
 currently:
   🔭 building: Modern web apps with AI integration
   🌱 learning: DSA in C++ | System Design
@@ -66,11 +65,13 @@ currently:
   ⚡ fun_fact: I debug with console.log and I'm proud of it 😄
 ```
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=karthik5033&style=for-the-badge&color=FFD93D&label=PROFILE+VIEWS" alt="Profile Views"/>
-</p>
-
-> 🍌 *"Do you know the Muffin Man?"* — Every Minion ever
+<table border="1" bordercolor="#30363d" cellpadding="5" cellspacing="0" width="100%" style="border-collapse: collapse; border-radius: 6px;">
+  <tr>
+    <td align="center" valign="middle" bgcolor="#0d1117" height="45">
+      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=15&pause=500&color=58A6FF&center=true&vCenter=true&width=450&height=30&lines=Building+modern+web+applications;Passionate+about+Generative+AI;Constantly+learning+and+architecting" alt="Typing SVG" />
+    </td>
+  </tr>
+</table>
 
 </td>
 <td width="40%" valign="top" align="center">
@@ -82,92 +83,143 @@ currently:
 </table>
 
 <!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./assets/custom-divider.svg" width="100%">
 
 ## 🏗️ Featured Projects
 
 <div align="center">
 
-<table border="1" bordercolor="#30363d" cellpadding="15" style="border-collapse: collapse;">
+<table border="1" bordercolor="#30363d" cellpadding="10" width="100%" style="border-collapse: collapse;">
 <tr>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/devicedna.svg" width="60">
-    <h3>DeviceDNA</h3>
-    <a href="https://github.com/karthik5033/DeviceDNA"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>IoT Cybersecurity Intelligence Platform</b><br>
-  Software-defined cybersecurity platform purpose-built for IoT network security and threat detection.<br><br>
-  ⚡ Real-time detection &bull; 🤖 Packet analysis &bull; 🛡️ Firewall<br><br>
-  <b>Tech:</b> <code>Python</code> <code>Next.js</code>
-</td>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/fairlearn.svg" width="60">
-    <h3>FairLearnAI</h3>
-    <a href="https://github.com/karthik5033/FairLearnAI"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>AI Safety Interface for Education</b><br>
-  Intelligent proxy preventing unethical use of LLMs filtering cheating and hallucinations in academia.<br><br>
-  🎓 Plagiarism guard &bull; 🤖 Hallucination filter &bull; 🧠 AI limits<br><br>
-  <b>Tech:</b> <code>FastAPI</code> <code>LangChain</code> <code>React</code>
-</td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-docker.svg" width="45" alt="Docker">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/DeviceDNA" style="text-decoration: none; font-size: 15px;"><b>DeviceDNA</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">IoT Cybersecurity Platform</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Software-defined cybersecurity platform purpose-built for IoT point-networks to actively detect, analyze, and isolate system anomalies.</p>
+          <span style="font-size: 10px; color: #58a6ff;">Python &bull; Next.js</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-javascript.svg" width="45" alt="JavaScript">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 15px;"><b>FairLearnAI</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">AI Safety Interface for Education</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">An intelligent API proxy intercepting unethical LLM usages, effectively filtering academic cheating and systemic AI hallucinations.</p>
+          <span style="font-size: 10px; color: #58a6ff;">FastAPI &bull; LangChain &bull; React</span>
+        </td>
+      </tr>
+    </table>
+  </td>
 </tr>
 
 <tr>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/phishing.svg" width="60">
-    <h3>Phishing-detector</h3>
-    <a href="https://github.com/karthik5033/Phishing-detector"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>AI-Powered Threat Prediction</b><br>
-  Comprehensive ML prediction app to isolate and neutralise malicious phishing URLs leveraging fast ML inference.<br><br>
-  🕵️ Real-time URLs &bull; 🤖 ML inference &bull; 🌐 Fast extension<br><br>
-  <b>Tech:</b> <code>Python</code> <code>Scikit-learn</code> <code>FastAPI</code>
-</td>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/fraudlens.svg" width="60">
-    <h3>FraudLens</h3>
-    <a href="https://github.com/karthik5033/FraudLens"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>Real-time UPI Fraud Detection</b><br>
-  Predictive AI model flagging refund scams, impersonation attempts, and phishing in hinges data.<br><br>
-  🛡️ UPI safety &bull; 🤖 Anomaly tracking &bull; ⚡ Real-time alerts<br><br>
-  <b>Tech:</b> <code>TensorFlow</code> <code>Python</code> <code>Next.js</code>
-</td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-pandas.svg" width="45" alt="Pandas">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 15px;"><b>Phishing-detector</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
+          <span style="font-size: 10px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-tensorflow.svg" width="45" alt="TensorFlow">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/MedScanAI" style="text-decoration: none; font-size: 15px;"><b>MedScanAI</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Real-time AI Skin Diagnosis</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Sophisticated diagnostic aid tool utilizing custom robust computer vision models to precisely analyze patient dermatological imagery.</p>
+          <span style="font-size: 10px; color: #58a6ff;">Computer Vision &bull; Supabase &bull; Next.js</span>
+        </td>
+      </tr>
+    </table>
+  </td>
 </tr>
 
 <tr>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/medscan.svg" width="60">
-    <h3>MedScanAI</h3>
-    <a href="https://github.com/karthik5033/MedScanAI"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>Real-time AI Skin Diagnosis</b><br>
-  Sophisticated medical tool using custom vision models to analyze imagery and aid dermatological assessments.<br><br>
-  🩺 Live diagnostics &bull; 👁️ Custom CV &bull; 📊 Patient assessment<br><br>
-  <b>Tech:</b> <code>Computer Vision</code> <code>Supabase</code> <code>Next.js</code>
-</td>
-<td width="50%" valign="top">
-  <div align="center">
-    <img src="./assets/agriconnect.svg" width="60">
-    <h3>AgriConnect</h3>
-    <a href="https://github.com/karthik5033/AgriConnect"><img src="https://img.shields.io/badge/View_Source-181717?style=flat&logo=github&logoColor=white"></a>
-  </div>
-  <br>
-  <b>Agricultural Social Network</b><br>
-  Complete, production-structured MERN stack social media application focused entirely on empowering farmers.<br><br>
-  🚜 Farmer-first &bull; 🌐 Social network &bull; 📱 Responsive UI<br><br>
-  <b>Tech:</b> <code>MongoDB</code> <code>React</code> <code>Node.js</code> <code>Express</code>
-</td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-mongoose.svg" width="45" alt="Mongoose">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 15px;"><b>AgriConnect</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Agricultural Social Network</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">A tightly-coupled production MERN stack network empowering farmers with essential peer communication and regional advisories.</p>
+          <span style="font-size: 10px; color: #58a6ff;">MongoDB &bull; React &bull; Node.js</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-numpy.svg" width="45" alt="Numpy">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 15px;"><b>CompostQA</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
+          <span style="font-size: 10px; color: #58a6ff;">Machine Learning &bull; Python</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<tr>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-jenkins.svg" width="45" alt="Jenkins">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 15px;"><b>MatterGen</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
+          <span style="font-size: 10px; color: #58a6ff;">AI &bull; Materials Science</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <img src="./assets/icon-prisma.svg" width="45" alt="Prisma">
+        </td>
+        <td valign="middle">
+          <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 15px;"><b>AvatarFlowX</b></a><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
+          <span style="font-size: 10px; color: #58a6ff;">Generative AI &bull; Full Stack</span>
+        </td>
+      </tr>
+    </table>
+  </td>
 </tr>
 </table>
 
@@ -182,18 +234,15 @@ currently:
 
 | Project | Description | Tech |
 |---------|-------------|------|
-| [🧪 CompostQA](https://github.com/karthik5033/CompostQA) | Precision ML for soil health. Lab data → maturity insights | ML, Python |
-| [🌀 MatterGen](https://github.com/karthik5033/MatterGen) | Discover novel stable crystals with target properties 10x faster | AI, Materials Science |
 | [🎨 Parallax Card UI](https://github.com/karthik5033/parallax_card_ui) | Interactive 3D cards with mouse-hover parallax effects | Vue.js |
 | [🌊 Flood-Fill Visualizer](https://github.com/karthik5033/Flood-Fill-visualizer) | Real-time algorithm visualization with dynamic animations | React, TypeScript |
-| [🏗️ CodeRed-Blue-t30](https://github.com/karthik5033/CodeRed-Blue-t30) | AvatarFlowX: Draw flowcharts → AI generates web apps | AI, Full Stack |
 | [🔧 Multithreaded File Scanner](https://github.com/karthik5033/multithreaded-file-scanner) | High-performance concurrent file scanning utility | C++ |
 
 </div>
 </details>
 
 <!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./assets/custom-divider.svg" width="100%">
 
 ## <img src="https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width="24"> Tech Stack
 
@@ -236,31 +285,40 @@ currently:
 </div>
 
 <!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./assets/custom-divider.svg" width="100%">
 
 ## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> GitHub Analytics
 
 
 <div align="center">
 
-<img src="./assets/custom-stats.svg?v=4" alt="Karthik's GitHub Stats" width="100%" />
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td width="50%" align="center" valign="middle">
+    <img src="./assets/minions-reaction.gif" width="95%" style="border-radius: 12px;" alt="Minions"/>
+  </td>
+  <td width="50%" align="center" valign="middle">
+    <img src="./assets/custom-stats.svg?v=6" alt="Top Languages" width="100%"/>
+  </td>
+</tr>
+</table>
 
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="https://streak-stats.demolab.com?user=karthik5033&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E" width="70%"/>
+<img src="./assets/custom-streak.svg?v=1" width="70%"/>
 
 <br/><br/>
 
 <!-- ACTIVITY GRAPH -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=karthik5033&bg_color=0D1117&color=FFD93D&line=FFD93D&point=FFFFFF&area_color=FFA726&area=true&hide_border=true&custom_title=🍌%20Contribution%20Graph" width="95%"/>
+<img src="./assets/custom-activity.svg?v=1" width="95%"/>
 
 </div>
 
 
 
 <!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./assets/custom-divider.svg" width="100%">
 
 ## 👾 Contribution Matrix
 
@@ -270,7 +328,7 @@ currently:
 </div>
 
 <!-- ANIMATED DIVIDER -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<img src="./assets/custom-divider.svg" width="100%">
 
 ## 🤝 Let's Connect
 

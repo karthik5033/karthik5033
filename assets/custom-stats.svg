@@ -1,8 +1,7 @@
-<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg width="420" height="240" viewBox="0 0 420 240" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
-          @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
           
           .bg { fill: #0D1117; }
           
@@ -12,20 +11,13 @@
             stroke-width: 1.5;
             filter: drop-shadow(0 8px 10px rgba(0,0,0,0.5));
           }
-
-          .rpg-title { font-family: 'Press Start 2P', monospace; font-size: 16px; fill: #FFD93D; }
-          .rpg-text { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFFFFF; }
-          .rpg-class { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #F8D866; text-shadow: 0 0 5px rgba(248,216,102,0.4); }
-          .rpg-level { font-family: 'Press Start 2P', monospace; font-size: 12px; fill: #FFD93D; }
-          .rpg-stat { font-family: 'Press Start 2P', monospace; font-size: 12px; }
-          .rpg-small-text { font-family: 'Press Start 2P', monospace; font-size: 8px; fill: #FFFFFF; }
           
           .term-key { font-family: 'Fira Code', monospace; fill: #8B949E; font-weight: 400; }
           .term-num { font-family: 'Fira Code', monospace; fill: #c9cacc; font-weight: 400; }
 
           .title {
             font-family: 'Fira Code', monospace;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             fill: #FFFFFF;
             text-shadow: 0 0 5px rgba(255,255,255,0.2);
@@ -36,30 +28,11 @@
             animation: fadeIn 0.5s ease forwards;
           }
 
-          .blink-slow {
-            animation: blink 2s step-end infinite;
-          }
-
-          .float-sprite {
-            animation: float 3s ease-in-out infinite;
-          }
-
           @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
           }
-          
-          @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-          }
-
-          @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); filter: drop-shadow(0 0 5px #00CCFF); }
-          }
         </style>
-        
         <pattern id="scanlines" patternUnits="userSpaceOnUse" width="4" height="4">
           <rect width="4" height="2" fill="#000" opacity="0.6"/>
           <rect y="2" width="4" height="2" fill="transparent"/>
@@ -67,79 +40,17 @@
       </defs>
 
       <!-- Main GitHub Background Canvas -->
-      <rect x="0" y="0" width="800" height="400" class="bg" rx="15" />
+      <rect x="0" y="0" width="420" height="240" class="bg" rx="15" />
 
-      <!-- Left Panel: RPG Game UI -->
-      <rect x="20" y="20" width="410" height="360" rx="15" class="glass-panel" />
+      <!-- Top Languages Panel -->
+      <rect x="10" y="10" width="400" height="220" rx="10" class="glass-panel" />
+      <rect x="10" y="10" width="400" height="220" rx="10" fill="url(#scanlines)" opacity="0.1" />
       
-      <g transform="translate(35, 30)">
-        <!-- Game Screen Inner Border -->
-        <rect x="0" y="0" width="380" height="340" rx="4" fill="#0b0e14" stroke="#444" stroke-width="2"/>
-        
-        <!-- CRT Scanline Effect Overlay -->
-        <rect x="0" y="0" width="380" height="340" fill="url(#scanlines)" opacity="0.3"/>
-        
-        <text x="20" y="30" class="rpg-title blink-slow" filter="drop-shadow(0 0 5px #FFD93D)">PLAYER 1 START</text>
-        <text x="20" y="70" class="rpg-text">CHAR : KARTHIK5033</text>
-        <text x="20" y="100" class="rpg-class">CLASS: WEB WIZARD</text>
-        <text x="20" y="130" class="rpg-level">LVL  : 31</text>
-
-        <!-- HP Bar -->
-        <text x="20" y="170" class="rpg-stat" fill="#FF3366">HP</text>
-        <rect x="60" y="158" width="220" height="14" fill="#222" stroke="#FFF" stroke-width="2"/>
-        <rect x="60" y="158" width="0" height="14" fill="#FF3366">
-          <animate attributeName="width" from="0" to="189.2" dur="1s" fill="freeze" />
-        </rect>
-
-        <!-- EXP Bar -->
-        <text x="20" y="200" class="rpg-stat" fill="#FFD93D">XP</text>
-        <rect x="60" y="188" width="220" height="14" fill="#222" stroke="#FFF" stroke-width="2"/>
-        <rect x="60" y="188" width="0" height="14" fill="#FFD93D">
-          <animate attributeName="width" from="0" to="161.48000000000002" dur="1.5s" fill="freeze" />
-        </rect>
-        <text x="295" y="200" class="rpg-small-text">734/1000</text>
-
-        <!-- Attributes Grid -->
-        <g class="animate-item" style="animation-delay: 500ms;">
-          <text x="20" y="250" class="rpg-text">STR (STARS) : <tspan fill="#F8D866">1</tspan></text>
-          <text x="20" y="280" class="rpg-text">INT (REPOS) : <tspan fill="#F8D866">28</tspan></text>
-          <text x="20" y="310" class="rpg-text">AGI (FLLWS) : <tspan fill="#F8D866">31</tspan></text>
-        </g>
-
-        <!-- Floating 8-bit Sword Sprite -->
-        <g transform="translate(260, 230) scale(1.8)" class="float-sprite">
-           <!-- Sword outline -->
-           <rect x="0" y="40" width="5" height="5" fill="#555"/>
-           <rect x="5" y="35" width="5" height="5" fill="#555"/>
-           <rect x="10" y="30" width="5" height="5" fill="#555"/>
-           <rect x="15" y="25" width="5" height="5" fill="#555"/>
-           <rect x="20" y="20" width="5" height="5" fill="#555"/>
-           <rect x="25" y="15" width="5" height="5" fill="#555"/>
-           <rect x="30" y="10" width="5" height="5" fill="#555"/>
-           
-           <rect x="15" y="35" width="5" height="5" fill="#555"/>
-           <rect x="20" y="30" width="5" height="5" fill="#555"/>
-           
-           <rect x="5" y="45" width="5" height="5" fill="#FFF"/>
-           <rect x="10" y="50" width="5" height="5" fill="#FFF"/>
-
-           <!-- Blade interior -->
-           <path d="M 25 20 L 40 5 L 45 10 L 30 25 Z" fill="#FFD93D"/>
-           <!-- Sword Hilt -->
-           <rect x="15" y="30" width="5" height="5" fill="#F8D866"/>
-           <rect x="5" y="40" width="5" height="5" fill="#F8D866"/>
-        </g>
-      </g>
-  
-
-      <!-- Right Panel: Top Languages Donut Chart -->
-      <rect x="450" y="20" width="330" height="360" rx="15" class="glass-panel" />
-      
-      <text x="470" y="55" class="title animate-item" style="animation-delay: 200ms;">🍩 Top Languages</text>
-      <line x1="470" y1="70" x2="760" y2="70" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
+      <text x="210" y="40" text-anchor="middle" class="title animate-item" style="animation-delay: 200ms;">🍩 Top Languages</text>
+      <line x1="30" y1="52" x2="390" y2="52" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="1"/>
       
       <!-- Generated SVG Arcs -->
-      <g transform="translate(615, 125) rotate(-90)">
+      <g transform="translate(130, 135) rotate(-90)">
         
       <!-- TypeScript -->
       <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3178c6" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="0" filter="drop-shadow(0 0 2px #3178c680)">
@@ -169,38 +80,38 @@
       </g>
       
       <!-- Donut Hole Text -->
-      <text x="615" y="130" text-anchor="middle" font-family="'Fira Code', monospace" font-size="14" font-weight="700" fill="#FFFFFF">Code</text>
+      <text x="130" y="140" text-anchor="middle" font-family="'Fira Code', monospace" font-size="13" font-weight="700" fill="#FFFFFF">Code</text>
 
       <!-- Language Legend List -->
       
       <g class="animate-item" style="animation-delay: 0ms">
-        <rect x="480" y="195" width="12" height="12" rx="3" fill="#3178c6"/>
-        <text x="505" y="205" class="term-key" style="font-size:13px;">TypeScript</text>
-        <text x="750" y="205" class="term-num" style="font-size:13px;" text-anchor="end">63.7%</text>
+        <rect x="230" y="75" width="12" height="12" rx="3" fill="#3178c6"/>
+        <text x="255" y="85" class="term-key" style="font-size:12px;">TypeScript</text>
+        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">63.7%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 150ms">
-        <rect x="480" y="225" width="12" height="12" rx="3" fill="#f1e05a"/>
-        <text x="505" y="235" class="term-key" style="font-size:13px;">JavaScript</text>
-        <text x="750" y="235" class="term-num" style="font-size:13px;" text-anchor="end">9.5%</text>
+        <rect x="230" y="103" width="12" height="12" rx="3" fill="#f1e05a"/>
+        <text x="255" y="113" class="term-key" style="font-size:12px;">JavaScript</text>
+        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">9.5%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 300ms">
-        <rect x="480" y="255" width="12" height="12" rx="3" fill="#e34c26"/>
-        <text x="505" y="265" class="term-key" style="font-size:13px;">HTML</text>
-        <text x="750" y="265" class="term-num" style="font-size:13px;" text-anchor="end">8.7%</text>
+        <rect x="230" y="131" width="12" height="12" rx="3" fill="#e34c26"/>
+        <text x="255" y="141" class="term-key" style="font-size:12px;">HTML</text>
+        <text x="395" y="141" class="term-num" style="font-size:12px;" text-anchor="end">8.7%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 450ms">
-        <rect x="480" y="285" width="12" height="12" rx="3" fill="#3572A5"/>
-        <text x="505" y="295" class="term-key" style="font-size:13px;">Python</text>
-        <text x="750" y="295" class="term-num" style="font-size:13px;" text-anchor="end">8.3%</text>
+        <rect x="230" y="159" width="12" height="12" rx="3" fill="#3572A5"/>
+        <text x="255" y="169" class="term-key" style="font-size:12px;">Python</text>
+        <text x="395" y="169" class="term-num" style="font-size:12px;" text-anchor="end">8.3%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 600ms">
-        <rect x="480" y="315" width="12" height="12" rx="3" fill="#DA5B0B"/>
-        <text x="505" y="325" class="term-key" style="font-size:13px;">Jupyter Notebook</text>
-        <text x="750" y="325" class="term-num" style="font-size:13px;" text-anchor="end">4.4%</text>
+        <rect x="230" y="187" width="12" height="12" rx="3" fill="#DA5B0B"/>
+        <text x="255" y="197" class="term-key" style="font-size:12px;">Jupyter Noteb...</text>
+        <text x="395" y="197" class="term-num" style="font-size:12px;" text-anchor="end">4.4%</text>
       </g>
     
 

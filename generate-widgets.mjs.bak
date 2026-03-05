@@ -151,15 +151,6 @@ function generateGridSVG(user) {
     }
   }
 
-  const opposites = { 0: 1, 1: 0, 2: 3, 3: 2, 4: -1 };
-  const moves = [
-    { dc: 1, dr: 0, dir: 0 },
-    { dc: -1, dr: 0, dir: 1 },
-    { dc: 0, dr: 1, dir: 2 },
-    { dc: 0, dr: -1, dir: 3 }
-  ];
-  let curDir = 4; // 4 means any direction (start)
-
   pathPoints.push(curPos);
   const eatMap = {}; // "c_r" -> index in pathPoints where it is eaten
 
@@ -183,19 +174,19 @@ function generateGridSVG(user) {
     }
 
     // 2. Dijkstra to nearest target
-    const dist = Array.from({ length: COLS }, () => Array.from({ length: ROWS }, () => Array(5).fill(Infinity)));
-    const parent = Array.from({ length: COLS }, () => Array.from({ length: ROWS }, () => Array(5).fill(null)));
-    dist[curPos.c][curPos.r][curDir] = 0;
+    const dist = Array.from({ length: COLS }, () => Array(ROWS).fill(Infinity));
+    const parent = Array.from({ length: COLS }, () => Array(ROWS).fill(null));
+    dist[curPos.c][curPos.r] = 0;
     
     // Simple priority queue logic using an array
     const pq = [];
-    pq.push({ c: curPos.c, r: curPos.r, dir: curDir, d: 0 });
+    pq.push({ c: curPos.c, r: curPos.r, d: 0 });
     let bestTarget = null;
 
     while (pq.length > 0) {
       pq.sort((a, b) => a.d - b.d);
       const u = pq.shift();
-      if (dist[u.c][u.r][u.dir] < u.d) continue;
+      if (dist[u.c][u.r] < u.d) continue;
 
       let countU = grid[u.c][u.r].count;
       let tierU = countU === 1 ? 1 : (countU <= 3 ? 2 : (countU <= 5 ? 3 : 4));
@@ -206,25 +197,25 @@ function generateGridSVG(user) {
         break; // nearest target found!
       }
 
-      for (const m of moves) {
-        if (opposites[u.dir] === m.dir) continue; // NO U-TURNS!
+      const neighbors = [
+        { c: u.c + 1, r: u.r }, { c: u.c - 1, r: u.r },
+        { c: u.c, r: u.r + 1 }, { c: u.c, r: u.r - 1 }
+      ];
 
-        const nc = u.c + m.dc;
-        const nr = u.r + m.dr;
-
-        if (nc >= 0 && nc < COLS && nr >= 0 && nr < ROWS) {
+      for (const n of neighbors) {
+        if (n.c >= 0 && n.c < COLS && n.r >= 0 && n.r < ROWS) {
           let cost = 1; // base distance
-          if (grid[nc][nr].filled && !eaten[nc][nr]) {
-            let countN = grid[nc][nr].count;
+          if (grid[n.c][n.r].filled && !eaten[n.c][n.r]) {
+            let countN = grid[n.c][n.r].count;
             let tierN = countN === 1 ? 1 : (countN <= 3 ? 2 : (countN <= 5 ? 3 : 4));
             // Penalize moving across an uneaten cell heavily (unless it's our target tier)
             if (tierN === minTier) cost = 1;
             else cost = 100 * tierN;
           }
-          if (dist[u.c][u.r][u.dir] + cost < dist[nc][nr][m.dir]) {
-            dist[nc][nr][m.dir] = dist[u.c][u.r][u.dir] + cost;
-            parent[nc][nr][m.dir] = { c: u.c, r: u.r, dir: u.dir };
-            pq.push({ c: nc, r: nr, dir: m.dir, d: dist[nc][nr][m.dir] });
+          if (dist[u.c][u.r] + cost < dist[n.c][n.r]) {
+            dist[n.c][n.r] = dist[u.c][u.r] + cost;
+            parent[n.c][n.r] = u;
+            pq.push({ c: n.c, r: n.r, d: dist[n.c][n.r] });
           }
         }
       }
@@ -235,9 +226,9 @@ function generateGridSVG(user) {
     // Reconstruct path
     const route = [];
     let curr = bestTarget;
-    while (curr.c !== curPos.c || curr.r !== curPos.r || curr.dir !== curDir) {
+    while (curr.c !== curPos.c || curr.r !== curPos.r) {
       route.push({ c: curr.c, r: curr.r });
-      curr = parent[curr.c][curr.r][curr.dir];
+      curr = parent[curr.c][curr.r];
     }
     route.reverse(); // Now from curPos (exclusive) to bestTarget (inclusive)
 
@@ -250,7 +241,6 @@ function generateGridSVG(user) {
         eatMap[`${step.c}_${step.r}`] = pathPoints.length - 1;
       }
     }
-    curDir = bestTarget.dir;
     curPos = { c: bestTarget.c, r: bestTarget.r };
   }
 
@@ -267,7 +257,10 @@ function generateGridSVG(user) {
   let totalSteps = pathPoints.length - 1;
   if (totalSteps <= 0) totalSteps = 1;
 
+  // Per-cell keyframes: hide exactly at arrival, reappear at 96%
+  let cellStyles = '';
   let gridHtml = '';
+  let cellId = 0;
 
   weeks.forEach((week, wIdx) => {
     week.contributionDays.forEach((day, dIdx) => {
@@ -276,16 +269,19 @@ function generateGridSVG(user) {
         const idx = eatMap[`${wIdx}_${dIdx}`];
         if (idx !== undefined) {
           const frac = idx / totalSteps;
-          // Hide after tail passes. 8 body parts * lag(0.12) = 0.96s total tail delay.
-          // 0.96 / 60 = 0.016. So block hides when head is already +0.017 past it.
-          const f1 = "0";
-          const f2 = Math.min(frac, 0.996).toFixed(4); // Arrival of head
-          const f3 = Math.min(frac + 0.017, 0.997).toFixed(4); // Tail finishes passing
-          const f4 = "0.998"; // Keeps hidden
-          const f5 = "1"; // Resets to visible
-          
-          let anim = `<animate attributeName="opacity" values="1;1;0;0;1" keyTimes="${f1};${f2};${f3};${f4};${f5}" dur="${DUR}s" repeatCount="indefinite" />`;
-          gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}">${anim}</rect>`;
+          const arrPct = (frac * 100).toFixed(2);
+          const hidePct = (frac * 100 + 0.2).toFixed(2);
+          const cls = `c${cellId}`;
+          cellStyles += `.${cls}{animation:k${cellId} ${DUR}s linear infinite}`;
+          // Cells reappear in last 0.5% of cycle. At 100%→0% wrap, opacity:1 is already set.
+          if (parseFloat(hidePct) < 99.0) {
+            cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}99%{opacity:0}99.5%{opacity:1}100%{opacity:1}}`;
+          } else {
+            // Eaten very late — hide briefly, opacity:1 at 0% handles the reset on loop
+            cellStyles += `@keyframes k${cellId}{0%{opacity:1}${arrPct}%{opacity:1}${hidePct}%{opacity:0}100%{opacity:0}}`;
+          }
+          gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}" class="${cls}"/>`;
+          cellId++;
         } else {
           gridHtml += `<rect x="${wIdx * CELL}" y="${dIdx * CELL}" width="${SIZE}" height="${SIZE}" rx="2" fill="${color}"/>`;
         }
@@ -311,6 +307,7 @@ function generateGridSVG(user) {
       <defs>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+          ${cellStyles}
         </style>
         <filter id="snakeGlow">
           <feGaussianBlur stdDeviation="1.5" result="blur"/>
@@ -342,67 +339,6 @@ function generateGridSVG(user) {
   `;
 }
 
-// Generates the pro-developer minion animated divider
-function generateDividerSVG() {
-  return `
-    <svg width="800" height="14" viewBox="0 0 800 14" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="glowY" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="2.5" result="blur" />
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id="glowB" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="2.5" result="blur" />
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <linearGradient id="gradY" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#FFD93D" stop-opacity="0" />
-          <stop offset="50%" stop-color="#FFD93D" stop-opacity="1" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
-        </linearGradient>
-        <linearGradient id="gradB" x1="100%" y1="0%" x2="0%" y2="0%">
-          <stop offset="0%" stop-color="#4285F4" stop-opacity="0" />
-          <stop offset="50%" stop-color="#4285F4" stop-opacity="1" />
-          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1" />
-        </linearGradient>
-      </defs>
-      
-      <!-- Background Track -->
-      <rect x="0" y="6" width="800" height="2" fill="#21262d" rx="1" />
-      
-      <!-- Yellow Minion Pulse (Left to Right) -->
-      <g filter="url(#glowY)">
-        <rect x="-150" y="6" width="150" height="2" fill="url(#gradY)" rx="1">
-          <animate attributeName="x" values="-150;800;800" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" />
-        </rect>
-        <circle cx="0" cy="7" r="2" fill="#FFFFFF">
-          <animate attributeName="cx" values="0;950;950" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" />
-        </circle>
-      </g>
-      
-      <!-- Blue Minion Pulse (Right to Left / Delayed) -->
-      <g filter="url(#glowB)">
-        <rect x="800" y="6" width="150" height="2" fill="url(#gradB)" rx="1">
-          <animate attributeName="x" values="800;-150;-150" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="1.5s" />
-        </rect>
-        <circle cx="800" cy="7" r="2" fill="#FFFFFF">
-          <animate attributeName="cx" values="800;-150;-150" keyTimes="0;0.5;1" dur="3s" repeatCount="indefinite" begin="1.5s" />
-        </circle>
-      </g>
-      
-      <!-- Center Tech Node -->
-      <g>
-        <rect x="380" y="3" width="40" height="8" fill="#0D1117" stroke="#30363d" stroke-width="1" rx="4"/>
-        <text x="400" y="10" text-anchor="middle" font-family="'Segoe UI', Courier, monospace" font-weight="bold" font-size="9">
-          <tspan fill="#FFD93D">&lt;</tspan>
-          <tspan fill="#8b949e">/</tspan>
-          <tspan fill="#4285F4">&gt;</tspan>
-        </text>
-      </g>
-    </svg>
-  `;
-}
-
 async function fetchAndSave(url, filename) {
   try {
     const res = await fetch(url);
@@ -418,72 +354,25 @@ async function fetchAndSave(url, filename) {
 async function run() {
   const user = await fetchStats();
 
+  const trophiesSVG = generateTrophiesSVG(user);
   const gridSVG = generateGridSVG(user);
-  const dividerSVG = generateDividerSVG();
 
   const assetsDir = path.join(__dirname, "assets");
   if (!fs.existsSync(assetsDir)) {
     fs.mkdirSync(assetsDir);
   }
 
+  fs.writeFileSync(path.join(assetsDir, "custom-trophies.svg"), trophiesSVG);
+  console.log("✅ Successfully generated custom-trophies.svg");
+
   fs.writeFileSync(path.join(assetsDir, "custom-contributions.svg"), gridSVG);
   console.log("✅ Successfully generated custom-contributions.svg");
-
-  fs.writeFileSync(path.join(assetsDir, "custom-divider.svg"), dividerSVG);
-  console.log("✅ Successfully generated custom-divider.svg");
 
   const streakUrl = `https://streak-stats.demolab.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
   await fetchAndSave(streakUrl, "custom-streak.svg");
 
   const activityUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${USERNAME}&bg_color=0D1117&color=FFD93D&line=FFD93D&point=FFFFFF&area_color=FFA726&area=true&hide_border=true&custom_title=%F0%9F%8D%8C%20Contribution%20Graph&cache_bust=${Date.now()}`;
   await fetchAndSave(activityUrl, "custom-activity.svg");
-
-  await generateAnimatedIcons(assetsDir);
-}
-
-async function generateAnimatedIcons(assetsDir) {
-  const ICONS = {
-    docker: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-    javascript: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    pandas: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
-    tensorflow: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
-    mongoose: "https://cdn.simpleicons.org/mongoose/880000",
-    numpy: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
-    jenkins: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg",
-    prisma: "https://cdn.simpleicons.org/prisma/FFFFFF"
-  };
-
-  for (const [name, url] of Object.entries(ICONS)) {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      let innerSvg = await res.text();
-      
-      innerSvg = innerSvg.replace(/<\?xml[\s\S]*?\?>/i, "");
-      innerSvg = innerSvg.replace(/<!DOCTYPE[\s\S]*?>/gi, "");
-      
-      innerSvg = innerSvg.replace(/<svg\s+([^>]+)>/i, (match, p1) => {
-        let attrs = p1.replace(/\b(width|height)=["'][^"']*["']/gi, "");
-        return `<svg width="100%" height="100%" ${attrs}>`;
-      });
-      
-      const dur = (2.2 + (name.length % 3) * 0.4).toFixed(1);
-      
-      const wrapper = `<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <animateTransform attributeName="transform" type="translate" values="0,3; 0,-3; 0,3" dur="${dur}s" repeatCount="indefinite" />
-    <svg width="36" height="36" x="7" y="7">
-      ${innerSvg}
-    </svg>
-  </g>
-</svg>`;
-
-      fs.writeFileSync(path.join(assetsDir, `icon-${name}.svg`), wrapper);
-      console.log(`✅ Successfully generated custom animated icon-${name}.svg`);
-    } catch (err) {
-      console.error(`❌ Failed to generated icon ${name}:`, err);
-    }
-  }
 }
 
 run();
