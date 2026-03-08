@@ -54,27 +54,27 @@
         
       <!-- TypeScript -->
       <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3178c6" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="0" filter="drop-shadow(0 0 2px #3178c680)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 180.10750683030284 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 171.6252066656104 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
       </circle>
     
       <!-- JavaScript -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#f1e05a" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-180.10750683030284" filter="drop-shadow(0 0 2px #f1e05a80)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 26.860617188192734 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
-      </circle>
-    
-      <!-- HTML -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#e34c26" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-206.9681240184956" filter="drop-shadow(0 0 2px #e34c2680)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 24.598670477608078 282.7433388230814" dur="1s" begin="0.3s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#f1e05a" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-171.6252066656104" filter="drop-shadow(0 0 2px #f1e05a80)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 35.06017401406209 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
       </circle>
     
       <!-- Python -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-231.56679449610365" filter="drop-shadow(0 0 2px #3572A580)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 23.467697122315755 282.7433388230814" dur="1s" begin="0.44999999999999996s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-206.68538067967248" filter="drop-shadow(0 0 2px #3572A580)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 32.232740625831276 282.7433388230814" dur="1s" begin="0.3s" fill="freeze" />
       </circle>
     
       <!-- Jupyter Notebook -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#DA5B0B" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-255.0344916184194" filter="drop-shadow(0 0 2px #DA5B0B80)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 12.440706908215581 282.7433388230814" dur="1s" begin="0.6s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#DA5B0B" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-238.91812130550375" filter="drop-shadow(0 0 2px #DA5B0B80)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 16.964600329384883 282.7433388230814" dur="1s" begin="0.44999999999999996s" fill="freeze" />
+      </circle>
+    
+      <!-- CSS -->
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#663399" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-255.88272163488864" filter="drop-shadow(0 0 2px #66339980)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 11.026990214100174 282.7433388230814" dur="1s" begin="0.6s" fill="freeze" />
       </circle>
     
       </g>
@@ -87,31 +87,31 @@
       <g class="animate-item" style="animation-delay: 0ms">
         <rect x="230" y="75" width="12" height="12" rx="3" fill="#3178c6"/>
         <text x="255" y="85" class="term-key" style="font-size:12px;">TypeScript</text>
-        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">63.7%</text>
+        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">60.7%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 150ms">
         <rect x="230" y="103" width="12" height="12" rx="3" fill="#f1e05a"/>
         <text x="255" y="113" class="term-key" style="font-size:12px;">JavaScript</text>
-        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">9.5%</text>
+        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">12.4%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 300ms">
-        <rect x="230" y="131" width="12" height="12" rx="3" fill="#e34c26"/>
-        <text x="255" y="141" class="term-key" style="font-size:12px;">HTML</text>
-        <text x="395" y="141" class="term-num" style="font-size:12px;" text-anchor="end">8.7%</text>
+        <rect x="230" y="131" width="12" height="12" rx="3" fill="#3572A5"/>
+        <text x="255" y="141" class="term-key" style="font-size:12px;">Python</text>
+        <text x="395" y="141" class="term-num" style="font-size:12px;" text-anchor="end">11.4%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 450ms">
-        <rect x="230" y="159" width="12" height="12" rx="3" fill="#3572A5"/>
-        <text x="255" y="169" class="term-key" style="font-size:12px;">Python</text>
-        <text x="395" y="169" class="term-num" style="font-size:12px;" text-anchor="end">8.3%</text>
+        <rect x="230" y="159" width="12" height="12" rx="3" fill="#DA5B0B"/>
+        <text x="255" y="169" class="term-key" style="font-size:12px;">Jupyter Noteb...</text>
+        <text x="395" y="169" class="term-num" style="font-size:12px;" text-anchor="end">6.0%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 600ms">
-        <rect x="230" y="187" width="12" height="12" rx="3" fill="#DA5B0B"/>
-        <text x="255" y="197" class="term-key" style="font-size:12px;">Jupyter Noteb...</text>
-        <text x="395" y="197" class="term-num" style="font-size:12px;" text-anchor="end">4.4%</text>
+        <rect x="230" y="187" width="12" height="12" rx="3" fill="#663399"/>
+        <text x="255" y="197" class="term-key" style="font-size:12px;">CSS</text>
+        <text x="395" y="197" class="term-num" style="font-size:12px;" text-anchor="end">3.9%</text>
       </g>
     
 
