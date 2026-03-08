@@ -415,11 +415,131 @@ async function fetchAndSave(url, filename) {
   }
 }
 
+// Generates a local contribution activity chart SVG from real data
+function generateActivitySVG(user) {
+  const weeks = user.contributionsCollection.contributionCalendar.weeks;
+  const totalContributions = user.contributionsCollection.contributionCalendar.totalContributions;
+
+  // Flatten all days, keep last 52 weeks (364 days) worth of weekly totals
+  const weeklyTotals = weeks.map(week =>
+    week.contributionDays.reduce((sum, d) => sum + d.contributionCount, 0)
+  );
+
+  // Also flatten daily for the sparkline
+  const days = weeks.flatMap(w => w.contributionDays);
+
+  const W = 800;
+  const H = 200;
+  const PAD_L = 42;
+  const PAD_R = 20;
+  const PAD_T = 45;
+  const PAD_B = 38;
+  const chartW = W - PAD_L - PAD_R;
+  const chartH = H - PAD_T - PAD_B;
+
+  const maxVal = Math.max(...weeklyTotals, 1);
+  const cols = weeklyTotals.length;
+
+  // Build polyline points
+  const pts = weeklyTotals.map((v, i) => {
+    const x = PAD_L + (i / (cols - 1)) * chartW;
+    const y = PAD_T + chartH - (v / maxVal) * chartH;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+
+  // Area fill path
+  const areaD = [
+    `M ${PAD_L},${PAD_T + chartH}`,
+    ...weeklyTotals.map((v, i) => {
+      const x = PAD_L + (i / (cols - 1)) * chartW;
+      const y = PAD_T + chartH - (v / maxVal) * chartH;
+      return `L ${x.toFixed(1)},${y.toFixed(1)}`;
+    }),
+    `L ${PAD_L + chartW},${PAD_T + chartH}`,
+    'Z'
+  ].join(' ');
+
+  // Y-axis labels (0, mid, max)
+  const yLabels = [0, Math.round(maxVal / 2), maxVal].map((v, idx) => {
+    const y = PAD_T + chartH - (v / maxVal) * chartH;
+    return `<text x="${PAD_L - 6}" y="${y.toFixed(1)}" text-anchor="end" font-family="'Fira Code',monospace" font-size="9" fill="#8b949e" dominant-baseline="middle">${v}</text>`;
+  }).join('');
+
+  // X-axis month labels — one per month boundary
+  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  let lastMonth = -1;
+  const xLabels = weeks.map((week, i) => {
+    const date = new Date(week.contributionDays[0]?.date || '');
+    const mo = date.getMonth();
+    if (isNaN(mo) || mo === lastMonth) return '';
+    lastMonth = mo;
+    const x = PAD_L + (i / (cols - 1)) * chartW;
+    return `<text x="${x.toFixed(1)}" y="${H - PAD_B + 14}" text-anchor="middle" font-family="'Fira Code',monospace" font-size="9" fill="#8b949e">${monthNames[mo]}</text>`;
+  }).join('');
+
+  // Find peak week for dot annotation
+  const peakIdx = weeklyTotals.indexOf(maxVal);
+  const peakX = PAD_L + (peakIdx / (cols - 1)) * chartW;
+  const peakY = PAD_T + chartH - (maxVal / maxVal) * chartH;
+
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&amp;display=swap');
+    </style>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD93D" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFD93D" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="lineGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="${W}" height="${H}" fill="#0D1117" rx="12"/>
+  <rect x="0" y="0" width="${W}" height="${H}" fill="#161B22" rx="12" opacity="0.6"/>
+
+  <!-- Title -->
+  <text x="${PAD_L}" y="22" font-family="'Fira Code',monospace" font-size="13" font-weight="700" fill="#FFD93D">🍌 Contribution Graph</text>
+  <text x="${W - PAD_R}" y="22" text-anchor="end" font-family="'Fira Code',monospace" font-size="11" fill="#8b949e">${totalContributions} contributions this year</text>
+
+  <!-- Grid lines -->
+  ${[0, 0.25, 0.5, 0.75, 1].map(f => {
+    const y = (PAD_T + chartH - f * chartH).toFixed(1);
+    return `<line x1="${PAD_L}" y1="${y}" x2="${PAD_L + chartW}" y2="${y}" stroke="#21262d" stroke-width="1"/>`;
+  }).join('')}
+
+  <!-- Area fill -->
+  <path d="${areaD}" fill="url(#areaGrad)"/>
+
+  <!-- Line -->
+  <polyline points="${pts.join(' ')}" fill="none" stroke="#FFD93D" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" filter="url(#lineGlow)"/>
+
+  <!-- Peak dot + label -->
+  <circle cx="${peakX.toFixed(1)}" cy="${peakY.toFixed(1)}" r="4" fill="#FFD93D" filter="url(#lineGlow)"/>
+  <rect x="${(peakX - 18).toFixed(1)}" y="${(peakY - 22).toFixed(1)}" width="36" height="14" rx="3" fill="#FFD93D"/>
+  <text x="${peakX.toFixed(1)}" y="${(peakY - 12).toFixed(1)}" text-anchor="middle" font-family="'Fira Code',monospace" font-size="8" font-weight="700" fill="#0D1117">${maxVal}/wk</text>
+
+  <!-- Y axis -->
+  ${yLabels}
+
+  <!-- X axis labels -->
+  ${xLabels}
+
+  <!-- Axes -->
+  <line x1="${PAD_L}" y1="${PAD_T}" x2="${PAD_L}" y2="${PAD_T + chartH}" stroke="#30363d" stroke-width="1"/>
+  <line x1="${PAD_L}" y1="${PAD_T + chartH}" x2="${PAD_L + chartW}" y2="${PAD_T + chartH}" stroke="#30363d" stroke-width="1"/>
+</svg>`;
+}
+
 async function run() {
   const user = await fetchStats();
 
   const gridSVG = generateGridSVG(user);
   const dividerSVG = generateDividerSVG();
+  const activitySVG = generateActivitySVG(user);
 
   const assetsDir = path.join(__dirname, "assets");
   if (!fs.existsSync(assetsDir)) {
@@ -432,11 +552,11 @@ async function run() {
   fs.writeFileSync(path.join(assetsDir, "custom-divider.svg"), dividerSVG);
   console.log("✅ Successfully generated custom-divider.svg");
 
+  fs.writeFileSync(path.join(assetsDir, "custom-activity.svg"), activitySVG);
+  console.log("✅ Successfully generated custom-activity.svg (local)");
+
   const streakUrl = `https://streak-stats.demolab.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
   await fetchAndSave(streakUrl, "custom-streak.svg");
-
-  const activityUrl = `https://github-readme-activity-graph.vercel.app/graph?username=${USERNAME}&bg_color=0D1117&color=FFD93D&line=FFD93D&point=FFFFFF&area_color=FFA726&area=true&hide_border=true&custom_title=%F0%9F%8D%8C%20Contribution%20Graph&cache_bust=${Date.now()}`;
-  await fetchAndSave(activityUrl, "custom-activity.svg");
 
   await generateAnimatedIcons(assetsDir);
 }

@@ -310,8 +310,8 @@ currently:
 
 <br/><br/>
 
-<!-- ACTIVITY GRAPH -->
-<img src="./assets/custom-activity.svg?v=1" width="95%"/>
+<!-- ACTIVITY GRAPH (locally generated from real GitHub data) -->
+<img src="./assets/custom-activity.svg?v=2" width="95%"/>
 
 </div>
 
