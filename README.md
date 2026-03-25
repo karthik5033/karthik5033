@@ -30,37 +30,21 @@
 
 <div align="center">
 
-<table border="1" bordercolor="#30363d" cellpadding="10" width="100%" style="border-collapse: collapse;">
+<table border="1" bordercolor="#30363d" cellpadding="15" width="100%" style="border-collapse: collapse;">
 <tr>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <span style="font-size: 36px;">🥉</span>
-        </td>
-        <td valign="middle">
-          <b style="font-size: 15px; color: #FFD93D;">3rd Place — Space Tech National Hackathon</b><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Category: Solid Waste Management</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Secured 3rd place overall at the prestigious national-level space tech hackathon in Bengaluru.</p>
-          <span style="font-size: 10px; color: #58a6ff;">March 2026 &bull; Bengaluru</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <div style="font-size: 45px; float: left; margin-right: 15px;">🥉</div>
+    <b style="font-size: 16px; color: #FFD93D;">3rd Place — Space Tech National Hackathon</b><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Category: Solid Waste Management</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Secured 3rd place overall at the prestigious national-level space tech hackathon in Bengaluru.</p>
+    <span style="font-size: 11px; color: #58a6ff;">March 2026 &bull; Bengaluru</span>
   </td>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <span style="font-size: 36px;">🥈</span>
-        </td>
-        <td valign="middle">
-          <b style="font-size: 15px; color: #e3e4e5;">2nd Place — Algorithm Roulette</b><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Varnotsava National Level Hackathon</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Showcased exceptional DSA and algorithmic problem-solving skills to secure the runner-up position.</p>
-          <span style="font-size: 10px; color: #58a6ff;">SMVITM</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <div style="font-size: 45px; float: left; margin-right: 15px;">🥈</div>
+    <b style="font-size: 16px; color: #e3e4e5;">2nd Place — Algorithm Roulette</b><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Varnotsava National Level Hackathon</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Showcased exceptional DSA and algorithmic problem-solving skills to secure the runner-up position.</p>
+    <span style="font-size: 11px; color: #58a6ff;">SMVITM</span>
   </td>
 </tr>
 </table>
@@ -72,136 +56,72 @@
 
 <div align="center">
 
-<table border="1" bordercolor="#30363d" cellpadding="10" width="100%" style="border-collapse: collapse;">
+<table border="1" bordercolor="#30363d" cellpadding="15" width="100%" style="border-collapse: collapse;">
 <tr>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-docker.svg" width="45" alt="Docker">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/DeviceDNA" style="text-decoration: none; font-size: 15px;"><b>DeviceDNA</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">IoT Cybersecurity Platform</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Software-defined cybersecurity platform purpose-built for IoT point-networks to actively detect, analyze, and isolate system anomalies.</p>
-          <span style="font-size: 10px; color: #58a6ff;">Python &bull; Next.js</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-docker.svg" width="65" align="left" style="margin-right: 15px;" alt="Docker">
+    <a href="https://github.com/karthik5033/DeviceDNA" style="text-decoration: none; font-size: 16px;"><b>DeviceDNA</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">IoT Cybersecurity Platform</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Software-defined cybersecurity platform purpose-built for IoT point-networks to actively detect, analyze, and isolate system anomalies.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Python &bull; Next.js</span>
   </td>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-javascript.svg" width="45" alt="JavaScript">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 15px;"><b>FairLearnAI</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">AI Safety Interface for Education</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">An intelligent API proxy intercepting unethical LLM usages, effectively filtering academic cheating and systemic AI hallucinations.</p>
-          <span style="font-size: 10px; color: #58a6ff;">FastAPI &bull; LangChain &bull; React</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-javascript.svg" width="65" align="left" style="margin-right: 15px;" alt="JavaScript">
+    <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 16px;"><b>FairLearnAI</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">AI Safety Interface for Education</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An intelligent API proxy intercepting unethical LLM usages, effectively filtering academic cheating and systemic AI hallucinations.</p>
+    <span style="font-size: 11px; color: #58a6ff;">FastAPI &bull; LangChain &bull; React</span>
   </td>
 </tr>
 
 <tr>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-pandas.svg" width="45" alt="Pandas">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 15px;"><b>Phishing-detector</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
-          <span style="font-size: 10px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-pandas.svg" width="65" align="left" style="margin-right: 15px;" alt="Pandas">
+    <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 16px;"><b>Phishing-detector</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
   </td>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-tensorflow.svg" width="45" alt="TensorFlow">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/MedScanAI" style="text-decoration: none; font-size: 15px;"><b>MedScanAI</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Real-time AI Skin Diagnosis</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Sophisticated diagnostic aid tool utilizing custom robust computer vision models to precisely analyze patient dermatological imagery.</p>
-          <span style="font-size: 10px; color: #58a6ff;">Computer Vision &bull; Supabase &bull; Next.js</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-tensorflow.svg" width="65" align="left" style="margin-right: 15px;" alt="TensorFlow">
+    <a href="https://github.com/karthik5033/MedScanAI" style="text-decoration: none; font-size: 16px;"><b>MedScanAI</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Real-time AI Skin Diagnosis</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Sophisticated diagnostic aid tool utilizing custom robust computer vision models to precisely analyze patient dermatological imagery.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Computer Vision &bull; Supabase &bull; Next.js</span>
   </td>
 </tr>
 
 <tr>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-mongoose.svg" width="45" alt="Mongoose">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 15px;"><b>AgriConnect</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Agricultural Social Network</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">A tightly-coupled production MERN stack network empowering farmers with essential peer communication and regional advisories.</p>
-          <span style="font-size: 10px; color: #58a6ff;">MongoDB &bull; React &bull; Node.js</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-mongoose.svg" width="65" align="left" style="margin-right: 15px;" alt="Mongoose">
+    <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 16px;"><b>AgriConnect</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Agricultural Social Network</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A tightly-coupled production MERN stack network empowering farmers with essential peer communication and regional advisories.</p>
+    <span style="font-size: 11px; color: #58a6ff;">MongoDB &bull; React &bull; Node.js</span>
   </td>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-numpy.svg" width="45" alt="Numpy">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 15px;"><b>CompostQA</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
-          <span style="font-size: 10px; color: #58a6ff;">Machine Learning &bull; Python</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-numpy.svg" width="65" align="left" style="margin-right: 15px;" alt="Numpy">
+    <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 16px;"><b>CompostQA</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Machine Learning &bull; Python</span>
   </td>
 </tr>
 
 <tr>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-jenkins.svg" width="45" alt="Jenkins">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 15px;"><b>MatterGen</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
-          <span style="font-size: 10px; color: #58a6ff;">AI &bull; Materials Science</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-jenkins.svg" width="65" align="left" style="margin-right: 15px;" alt="Jenkins">
+    <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 16px;"><b>MatterGen</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
+    <span style="font-size: 11px; color: #58a6ff;">AI &bull; Materials Science</span>
   </td>
-  <td width="50%" valign="middle">
-    <table border="0" cellpadding="5" cellspacing="0" width="100%">
-      <tr>
-        <td width="50" valign="middle" align="center">
-          <img src="./assets/icon-prisma.svg" width="45" alt="Prisma">
-        </td>
-        <td valign="middle">
-          <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 15px;"><b>AvatarFlowX</b></a><br>
-          <span style="font-size: 12px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
-          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
-          <span style="font-size: 10px; color: #58a6ff;">Generative AI &bull; Full Stack</span>
-        </td>
-      </tr>
-    </table>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-prisma.svg" width="65" align="left" style="margin-right: 15px;" alt="Prisma">
+    <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 16px;"><b>AvatarFlowX</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Generative AI &bull; Full Stack</span>
   </td>
 </tr>
 </table>
