@@ -22,67 +22,50 @@
           <br/>👨‍💻 <b>HACKED!</b><br/>
           <img src="./assets/hacker.gif" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
         </details>
-      </td>
-      <td width="33%" align="center" valign="top">
-        <details>
-          <summary><b>📦 Mystery Box B</b></summary>
-          <br/>🎉 <b>YOU FOUND THEM!</b><br/>
-          <img src="./assets/a1.webp" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
-        </details>
-      </td>
-      <td width="33%" align="center" valign="top">
-        <details>
-          <summary><b>📦 Mystery Box C</b></summary>
-          <br/>🍌 <b>WRONG MINION!</b><br/>
-          <img src="./assets/bbb.webp" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
-        </details>
-      </td>
-    </tr>
-  </table>
-  <br/>
-</div>
 
-<!-- ANIMATED WAVE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:FFD93D,50:FFC107,100:FF9800&section=header"/>
+<!-- ANIMATED DIVIDER -->
+<img src="./assets/custom-divider.svg" width="100%">
 
-## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
+## <img src="https://media.giphy.com/media/l0ExhcMymdL6TrZ84/giphy.gif" width="28"> Achievements & Hackathons
 
-<table border="0" width="100%" style="border-collapse: collapse;">
+<div align="center">
+
+<table border="1" bordercolor="#30363d" cellpadding="10" width="100%" style="border-collapse: collapse;">
 <tr>
-<td width="60%" valign="top">
-
-```yaml
-name: Karthik
-location: Bangalore, India 🇮🇳
-current_focus: Full Stack Web Dev + Generative AI
-education: Computer Science @ RVCE (ISE-28)
-passion: Building AI-powered applications
-currently:
-  🔭 building: Modern web apps with AI integration
-  🌱 learning: DSA in C++ | System Design
-  👯 seeking: Hackathons & Open Source collabs
-  🍌 motto: "Bello!" — ship fast, break nothing
-  ⚡ fun_fact: I debug with console.log and I'm proud of it 😄
-```
-
-<table border="1" bordercolor="#30363d" cellpadding="5" cellspacing="0" width="100%" style="border-collapse: collapse; border-radius: 6px;">
-  <tr>
-    <td align="center" valign="middle" bgcolor="#0d1117" height="45">
-      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=15&pause=500&color=58A6FF&center=true&vCenter=true&width=450&height=30&lines=Building+modern+web+applications;Passionate+about+Generative+AI;Constantly+learning+and+architecting" alt="Typing SVG" />
-    </td>
-  </tr>
-</table>
-
-</td>
-<td width="40%" valign="top" align="center">
-  <img src="./assets/minions.gif" width="100%" alt="Minions Coding" style="border-radius: 10px; margin-top: 10px;"/>
-  <br/>
-  <img src="./assets/minion2.gif" width="100%" alt="Minions Cheering" style="border-radius: 10px; margin-top: 10px;"/>
-</td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <span style="font-size: 36px;">🥉</span>
+        </td>
+        <td valign="middle">
+          <b style="font-size: 15px; color: #FFD93D;">3rd Place — Space Tech National Hackathon</b><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Category: Solid Waste Management</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Secured 3rd place overall at the prestigious national-level space tech hackathon in Bengaluru.</p>
+          <span style="font-size: 10px; color: #58a6ff;">March 2026 &bull; Bengaluru</span>
+        </td>
+      </tr>
+    </table>
+  </td>
+  <td width="50%" valign="middle">
+    <table border="0" cellpadding="5" cellspacing="0" width="100%">
+      <tr>
+        <td width="50" valign="middle" align="center">
+          <span style="font-size: 36px;">🥈</span>
+        </td>
+        <td valign="middle">
+          <b style="font-size: 15px; color: #e3e4e5;">2nd Place — Algorithm Roulette</b><br>
+          <span style="font-size: 12px; color: #c9d1d9;">Varnotsava National Level Hackathon</span><br>
+          <p style="font-size: 11px; color: #8b949e; margin: 4px 0;">Showcased exceptional DSA and algorithmic problem-solving skills to secure the runner-up position.</p>
+          <span style="font-size: 10px; color: #58a6ff;">SMVITM</span>
+        </td>
+      </tr>
+    </table>
+  </td>
 </tr>
 </table>
 
-<!-- ANIMATED DIVIDER -->
+</div>
 <img src="./assets/custom-divider.svg" width="100%">
 
 ## 🏗️ Featured Projects
@@ -298,7 +281,7 @@ currently:
     <img src="./assets/minions-reaction.gif" width="95%" style="border-radius: 12px;" alt="Minions"/>
   </td>
   <td width="50%" align="center" valign="middle">
-    <img src="./assets/custom-stats.svg?v=6" alt="Top Languages" width="100%"/>
+    <img src="./assets/custom-stats.svg??v=1774458155770" alt="Top Languages" width="100%"/>
   </td>
 </tr>
 </table>
@@ -306,12 +289,12 @@ currently:
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="./assets/custom-streak.svg?v=1" width="70%"/>
+<img src="./assets/custom-streak.svg??v=1774458155770" width="70%"/>
 
 <br/><br/>
 
 <!-- ACTIVITY GRAPH (locally generated from real GitHub data) -->
-<img src="./assets/custom-activity.svg?v=2" width="95%"/>
+<img src="./assets/custom-activity.svg??v=1774458155770" width="95%"/>
 
 </div>
 
@@ -324,7 +307,7 @@ currently:
 
 <div align="center">
   <br/>
-  <img alt="github contribution matrix" src="./assets/custom-contributions.svg?v=11" width="100%" />
+  <img alt="github contribution matrix" src="./assets/custom-contributions.svg??v=1774458155770" width="100%" />
 </div>
 
 <!-- ANIMATED DIVIDER -->

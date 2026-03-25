@@ -35,6 +35,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/*.svg
-          git diff --quiet && git diff --staged --quiet || git commit -m "📈 Auto-update custom stats and matrix SVGs"
+          node -e "const fs=require('fs'); let c=fs.readFileSync('README.md','utf8'); c=c.replace(/\\?v=\\d+/g, '?v=' + Date.now()); fs.writeFileSync('README.md',c);"
+          git add assets/*.svg README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "📈 Auto-update custom stats and heatmaps"
           git push
