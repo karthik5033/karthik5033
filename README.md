@@ -19,7 +19,7 @@
       <td width="33%" align="center" valign="top">
         <details>
           <summary><b>📦 Mystery Box A</b></summary>
-          <br/>👨‍💻 <b>HACKED!</b><br/>
+          <br/>👨‍💻 <b>Wrong one !</b><br/>
           <img src="./assets/hacker.gif" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
         </details>
       </td>
