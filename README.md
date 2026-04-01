@@ -7,7 +7,7 @@
 
 </div>
 
-<!-- MINION MYSTERY GAME -->
+<!-- MINION MYSTERY GAME .-->
 <div align="center">
   <br/>
   <h3>🕹️ Play a Mini-Game: Find the hidden Minion!</h3>
