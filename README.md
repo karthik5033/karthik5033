@@ -11,7 +11,7 @@
 <div align="center">
   <br/>
   <h3>🕹️ Play a Mini-Game: Find the hidden Minion!</h3>
-  <i>Only the most curious developers will find Bob... <br/> Dare to open a mystery box?</i>
+  <i>Only the most curious developers will find Bob... <br/> Dare to open a mystery box ?</i>
   <br/><br/>
   
   <table width="80%">
