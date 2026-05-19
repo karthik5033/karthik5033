@@ -26,7 +26,7 @@
       <td width="33%" align="center" valign="top">
         <details>
           <summary><b>📦 Mystery Box B</b></summary>
-          <br/>🎉 <b>YOU FOUND THEM!</b><br/>
+          <br/>🎉 <b>YOU FOUND THEM</b><br/>
           <img src="./assets/a1.webp" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; margin-top: 10px;"/>
         </details>
       </td>
