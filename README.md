@@ -157,6 +157,38 @@ currently:
     <span style="font-size: 11px; color: #58a6ff;">Generative AI &bull; Full Stack</span>
   </td>
 </tr>
+<tr>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-typescript.svg" width="90" align="left" style="margin-right: 15px;" alt="TypeScript">
+    <a href="https://github.com/karthik5033/AstraSky" style="text-decoration: none; font-size: 16px;"><b>AstraSky</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Waste Ecosystem Simulation</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A policy simulation AI platform mapping waste ecosystems using satellite intelligence, predicting illegal dumping, and modeling emissions.</p>
+    <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; AI</span>
+  </td>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-html5.svg" width="90" align="left" style="margin-right: 15px;" alt="HTML5">
+    <a href="https://github.com/karthik5033/Super-Mario-Game" style="text-decoration: none; font-size: 16px;"><b>Super Mario</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Evolution of Computing Platformer</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A 2D platformer taking players on a journey through the evolution of computing with dynamically generated levels rendered on HTML5 Canvas.</p>
+    <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; HTML5 Canvas</span>
+  </td>
+</tr>
+<tr>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-python.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
+    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">AI Fairness Courtroom</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An adversarial, multi-agent AI courtroom pitting LLMs against model predictions to identify proxy variables and disparate impact.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Python &bull; Generative AI</span>
+  </td>
+  <td width="50%" valign="top">
+    <img src="./assets/icon-cpp.svg" width="90" align="left" style="margin-right: 15px;" alt="C++">
+    <a href="https://github.com/karthik5033/multithreaded-file-scanner" style="text-decoration: none; font-size: 16px;"><b>Multithreaded Scanner</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">High-Performance Concurrency</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A high-performance concurrent file scanning utility built in C++ that leverages multithreading for rapid filesystem traversal and analysis.</p>
+    <span style="font-size: 11px; color: #58a6ff;">C++</span>
+  </td>
+</tr>
 </table>
 
 </div>
