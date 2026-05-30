@@ -73,14 +73,6 @@ currently:
   </tr>
 </table>
 
-<br>
-<div style="padding: 15px; border-radius: 8px; border: 1px solid #30363d; background: #0d1117;">
-  <h3 style="margin-top: 0; color: #58a6ff;">🚀 Startup Journey</h3>
-  I'm currently building <b><a href="https://github.com/karthik5033/ATELIER" style="color: #e6edf3; text-decoration: none;">ATELIER</a></b> as a startup! 
-  It's a premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences for an immersive experience. <br><br>
-  👉 <a href="https://github.com/karthik5033/ATELIER" style="color: #58a6ff;"><b>Check out ATELIER on GitHub!</b></a>
-</div>
-
 </td>
 <td width="40%" valign="top" align="center">
   <img src="./assets/minions.gif" width="100%" alt="Minions Coding" style="border-radius: 10px; margin-top: 10px;"/>
@@ -89,6 +81,23 @@ currently:
 </td>
 </tr>
 </table>
+
+<br>
+<div style="padding: 15px; border-radius: 8px; border: 1px solid #30363d; background: #0d1117;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td width="65%" valign="top" style="padding-right: 15px;">
+        <h3 style="margin-top: 0; color: #58a6ff;">🚀 Startup Journey</h3>
+        I'm currently building <b><a href="https://github.com/karthik5033/ATELIER" style="color: #e6edf3; text-decoration: none;">ATELIER</a></b> as a startup! 
+        It's a premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences for an immersive experience. <br><br>
+        👉 <a href="https://github.com/karthik5033/ATELIER" style="color: #58a6ff;"><b>Check out ATELIER on GitHub!</b></a>
+      </td>
+      <td width="35%" valign="middle" align="center">
+        <a href="https://github.com/karthik5033/ATELIER"><img src="./assets/ezgif.com-optimize.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" alt="ATELIER Preview"/></a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <!-- ANIMATED DIVIDER -->
 <img src="./assets/custom-divider.svg" width="100%">
