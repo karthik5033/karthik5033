@@ -52,10 +52,10 @@
 <td width="60%" valign="top">
 
 ```yaml
-name: Karthik
+name: Karthik K P
 location: Bangalore, India 🇮🇳
 current_focus: Full Stack Web Dev + Generative AI
-education: Computer Science @ RVCE (ISE-28)
+education: Information Science Engineering @ RVCE (ISE-28)
 passion: Building AI-powered applications
 currently:
   🔭 building: Modern web apps with AI integration
@@ -90,7 +90,7 @@ currently:
         <h3 style="margin-top: 0; color: #58a6ff;">🚀 Startup Journey</h3>
         I'm currently building <b><a href="https://github.com/karthik5033/ATELIER" style="color: #e6edf3; text-decoration: none;">ATELIER</a></b> as a startup! 
         It's a premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences for an immersive experience. <br><br>
-        👉 <a href="https://github.com/karthik5033/ATELIER" style="color: #58a6ff;"><b>GitHub Repo</b></a> &nbsp;&bull;&nbsp; 🌐 <a href="https://landing-page-store-zeta.vercel.app" style="color: #58a6ff;"><b>Visit Live App</b></a>
+        👉 🌐 <a href="https://landing-page-store-zeta.vercel.app" style="color: #58a6ff;"><b>Visit Live App</b></a>
       </td>
       <td width="35%" valign="middle" align="center">
         <a href="https://landing-page-store-zeta.vercel.app"><img src="./assets/ezgif.com-optimize.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" alt="ATELIER Preview"/></a>
@@ -143,11 +143,11 @@ currently:
 
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-mongoose.svg" width="90" align="left" style="margin-right: 15px;" alt="Mongoose">
-    <a href="https://github.com/karthik5033/ATELIER" style="text-decoration: none; font-size: 16px;"><b>ATELIER</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">Premium Landing Page Storefront</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences.</p>
-    <span style="font-size: 11px; color: #58a6ff;">Next.js &bull; Framer Motion &bull; Tailwind</span>
+    <img src="./assets/icon-javascript.svg" width="90" align="left" style="margin-right: 15px;" alt="JavaScript">
+    <a href="https://github.com/karthik5033/linked-list-visual-debugger" style="text-decoration: none; font-size: 16px;"><b>Linked List Debugger</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Visual Algorithm Tool</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An interactive, visual debugging environment for linked list operations to help developers understand memory management.</p>
+    <span style="font-size: 11px; color: #58a6ff;">JavaScript &bull; Data Structures</span>
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-numpy.svg" width="90" align="left" style="margin-right: 15px;" alt="Numpy">
