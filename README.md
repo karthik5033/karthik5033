@@ -92,48 +92,48 @@ currently:
 <table border="1" bordercolor="#30363d" cellpadding="15" width="100%" style="border-collapse: collapse;">
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-docker.svg" width="65" align="left" style="margin-right: 15px;" alt="Docker">
+    <img src="./assets/icon-docker.svg" width="90" align="left" style="margin-right: 15px;" alt="Docker">
     <a href="https://github.com/karthik5033/DeviceDNA" style="text-decoration: none; font-size: 16px;"><b>DeviceDNA</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">IoT Cybersecurity Platform</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Software-defined cybersecurity platform purpose-built for IoT point-networks to actively detect, analyze, and isolate system anomalies.</p>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; Next.js</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-javascript.svg" width="65" align="left" style="margin-right: 15px;" alt="JavaScript">
-    <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 16px;"><b>FairLearnAI</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">AI Safety Interface for Education</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An intelligent API proxy intercepting unethical LLM usages, effectively filtering academic cheating and systemic AI hallucinations.</p>
-    <span style="font-size: 11px; color: #58a6ff;">FastAPI &bull; LangChain &bull; React</span>
+    <img src="./assets/icon-javascript.svg" width="90" align="left" style="margin-right: 15px;" alt="JavaScript">
+    <a href="https://github.com/karthik5033/BioCrypt" style="text-decoration: none; font-size: 16px;"><b>BioCrypt</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">DNA-based File Encryption</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A file encryption system where data is encoded as DNA sequences, encrypted via controlled biological mutations, and recovered from corruption using sequence alignment algorithms.</p>
+    <span style="font-size: 11px; color: #58a6ff;">TypeScript</span>
   </td>
 </tr>
 
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-pandas.svg" width="65" align="left" style="margin-right: 15px;" alt="Pandas">
-    <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 16px;"><b>Phishing-detector</b></a><br>
+    <img src="./assets/icon-pandas.svg" width="90" align="left" style="margin-right: 15px;" alt="Pandas">
+    <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 16px;"><b>Secure-Sentinel</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-tensorflow.svg" width="65" align="left" style="margin-right: 15px;" alt="TensorFlow">
-    <a href="https://github.com/karthik5033/MedScanAI" style="text-decoration: none; font-size: 16px;"><b>MedScanAI</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">Real-time AI Skin Diagnosis</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Sophisticated diagnostic aid tool utilizing custom robust computer vision models to precisely analyze patient dermatological imagery.</p>
-    <span style="font-size: 11px; color: #58a6ff;">Computer Vision &bull; Supabase &bull; Next.js</span>
+    <img src="./assets/icon-tensorflow.svg" width="90" align="left" style="margin-right: 15px;" alt="TensorFlow">
+    <a href="https://github.com/karthik5033/OncoVision" style="text-decoration: none; font-size: 16px;"><b>OncoVision</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">AI Brain Tumor Forecasting</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">AI-powered brain tumor progression forecasting system that segments MRI scans, predicts growth trajectories, and simulates treatment decisions.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Computer Vision &bull; Python</span>
   </td>
 </tr>
 
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-mongoose.svg" width="65" align="left" style="margin-right: 15px;" alt="Mongoose">
-    <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 16px;"><b>AgriConnect</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">Agricultural Social Network</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A tightly-coupled production MERN stack network empowering farmers with essential peer communication and regional advisories.</p>
-    <span style="font-size: 11px; color: #58a6ff;">MongoDB &bull; React &bull; Node.js</span>
+    <img src="./assets/icon-mongoose.svg" width="90" align="left" style="margin-right: 15px;" alt="Mongoose">
+    <a href="https://github.com/karthik5033/ATELIER" style="text-decoration: none; font-size: 16px;"><b>ATELIER</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Premium Landing Page Storefront</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences.</p>
+    <span style="font-size: 11px; color: #58a6ff;">Next.js &bull; Framer Motion &bull; Tailwind</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-numpy.svg" width="65" align="left" style="margin-right: 15px;" alt="Numpy">
+    <img src="./assets/icon-numpy.svg" width="90" align="left" style="margin-right: 15px;" alt="Numpy">
     <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 16px;"><b>CompostQA</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
@@ -143,14 +143,14 @@ currently:
 
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-jenkins.svg" width="65" align="left" style="margin-right: 15px;" alt="Jenkins">
+    <img src="./assets/icon-jenkins.svg" width="90" align="left" style="margin-right: 15px;" alt="Jenkins">
     <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 16px;"><b>MatterGen</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
     <span style="font-size: 11px; color: #58a6ff;">AI &bull; Materials Science</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-prisma.svg" width="65" align="left" style="margin-right: 15px;" alt="Prisma">
+    <img src="./assets/icon-prisma.svg" width="90" align="left" style="margin-right: 15px;" alt="Prisma">
     <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 16px;"><b>AvatarFlowX</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
@@ -245,6 +245,24 @@ currently:
 ![Postman](https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=Postman&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Canva](https://img.shields.io/badge/Canva-00C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
+
+### 🤖 AI, ML & Data Science
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![OpenCV](https://img.shields.io/badge/opencv-5C3EE8.svg?style=for-the-badge&logo=opencv&logoColor=white)
+![Apache Spark](https://img.shields.io/badge/apache_spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
+![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/-HuggingFace-FDEE21?style=for-the-badge&logo=HuggingFace&logoColor=black)
 
 </div>
 
