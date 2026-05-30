@@ -73,6 +73,14 @@ currently:
   </tr>
 </table>
 
+<br>
+<div style="padding: 15px; border-radius: 8px; border: 1px solid #30363d; background: #0d1117;">
+  <h3 style="margin-top: 0; color: #58a6ff;">🚀 Startup Journey</h3>
+  I'm currently building <b><a href="https://github.com/karthik5033/ATELIER" style="color: #e6edf3; text-decoration: none;">ATELIER</a></b> as a startup! 
+  It's a premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences for an immersive experience. <br><br>
+  👉 <a href="https://github.com/karthik5033/ATELIER" style="color: #58a6ff;"><b>Check out ATELIER on GitHub!</b></a>
+</div>
+
 </td>
 <td width="40%" valign="top" align="center">
   <img src="./assets/minions.gif" width="100%" alt="Minions Coding" style="border-radius: 10px; margin-top: 10px;"/>
