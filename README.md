@@ -329,7 +329,7 @@ currently:
     <img src="./assets/minions-reaction.gif" width="95%" style="border-radius: 12px;" alt="Minions"/>
   </td>
   <td width="50%" align="center" valign="middle">
-    <img src="./assets/custom-stats.svg?v=1780545102003" alt="Top Languages" width="100%"/>
+    <img src="./assets/custom-stats.svg?v=1780630612789" alt="Top Languages" width="100%"/>
   </td>
 </tr>
 </table>
@@ -337,12 +337,12 @@ currently:
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="./assets/custom-streak.svg?v=1780545102003" width="70%"/>
+<img src="./assets/custom-streak.svg?v=1780630612789" width="70%"/>
 
 <br/><br/>
 
 <!-- ACTIVITY GRAPH (locally generated from real GitHub data) -->
-<img src="./assets/custom-activity.svg?v=1780545102003" width="95%"/>
+<img src="./assets/custom-activity.svg?v=1780630612789" width="95%"/>
 
 </div>
 
@@ -355,7 +355,7 @@ currently:
 
 <div align="center">
   <br/>
-  <img alt="github contribution matrix" src="./assets/custom-contributions.svg?v=1780545102003" width="100%" />
+  <img alt="github contribution matrix" src="./assets/custom-contributions.svg?v=1780630612789" width="100%" />
 </div>
 
 <!-- ANIMATED DIVIDER -->
