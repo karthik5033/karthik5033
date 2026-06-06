@@ -158,7 +158,7 @@ currently:
   <td width="50%" valign="top">
     <img src="./assets/icon-numpy.svg" width="90" align="left" style="margin-right: 15px;" alt="Numpy">
     <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 16px;"><b>CompostQA</b></a>
-    <a href="https://compost-qa.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
+    <a href="https://compost-qa-pro.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
     <div style="clear: both;"></div>
