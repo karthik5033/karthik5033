@@ -90,7 +90,7 @@ currently:
         <h3 style="margin-top: 0; color: #58a6ff;">🚀 Startup Journey</h3>
         I'm currently building <b><a href="https://github.com/karthik5033/ATELIER" style="color: #e6edf3; text-decoration: none;">ATELIER</a></b> as a startup! 
         It's a premium, curated storefront for ultra-high-end landing page templates featuring cinematic, scroll-synced image sequences for an immersive experience. <br><br>
-        👉 🌐 <a href="https://landing-page-store-zeta.vercel.app" style="color: #58a6ff;"><b>Visit Live App</b></a>
+        👉 <a href="https://landing-page-store-zeta.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge&logoColor=black" alt="Visit Live App" style="vertical-align: middle; height: 22px; border-radius: 4px;"/></a>
       </td>
       <td width="35%" valign="middle" align="center">
         <a href="https://landing-page-store-zeta.vercel.app"><img src="./assets/ezgif.com-optimize.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" alt="ATELIER Preview"/></a>
