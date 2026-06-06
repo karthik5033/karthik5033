@@ -149,7 +149,8 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-javascript.svg" width="90" align="left" style="margin-right: 15px;" alt="JavaScript">
-    <a href="https://github.com/karthik5033/linked-list-visual-debugger" style="text-decoration: none; font-size: 16px;"><b>Linked List Debugger</b></a><br>
+    <a href="https://github.com/karthik5033/linked-list-visual-debugger" style="text-decoration: none; font-size: 16px;"><b>Linked List Debugger</b></a>
+    <a href="https://linked-list-visual-debugger.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Visual Algorithm Tool</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An interactive, visual debugging environment for linked list operations to help developers understand memory management.</p>
     <div style="clear: both;"></div>
@@ -206,7 +207,8 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-python.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
-    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a><br>
+    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a>
+    <a href="https://fair-learn-ai.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Fairness Courtroom</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An adversarial, multi-agent AI courtroom pitting LLMs against model predictions to identify proxy variables and disparate impact.</p>
     <div style="clear: both;"></div>
