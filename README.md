@@ -113,13 +113,16 @@ currently:
     <a href="https://github.com/karthik5033/DeviceDNA" style="text-decoration: none; font-size: 16px;"><b>DeviceDNA</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">IoT Cybersecurity Platform</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Software-defined cybersecurity platform purpose-built for IoT point-networks to actively detect, analyze, and isolate system anomalies.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; Next.js</span>
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-javascript.svg" width="90" align="left" style="margin-right: 15px;" alt="JavaScript">
-    <a href="https://github.com/karthik5033/BioCrypt" style="text-decoration: none; font-size: 16px;"><b>BioCrypt</b></a><br>
+    <a href="https://github.com/karthik5033/BioCrypt" style="text-decoration: none; font-size: 16px;"><b>BioCrypt</b></a>
+    <a href="https://bio-crypt.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">DNA-based File Encryption</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A file encryption system where data is encoded as DNA sequences, encrypted via controlled biological mutations, and recovered from corruption using sequence alignment algorithms.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">TypeScript</span>
   </td>
 </tr>
@@ -130,6 +133,7 @@ currently:
     <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 16px;"><b>Secure-Sentinel</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
   </td>
   <td width="50%" valign="top">
@@ -137,6 +141,7 @@ currently:
     <a href="https://github.com/karthik5033/OncoVision" style="text-decoration: none; font-size: 16px;"><b>OncoVision</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Brain Tumor Forecasting</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">AI-powered brain tumor progression forecasting system that segments MRI scans, predicts growth trajectories, and simulates treatment decisions.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Computer Vision &bull; Python</span>
   </td>
 </tr>
@@ -147,13 +152,16 @@ currently:
     <a href="https://github.com/karthik5033/linked-list-visual-debugger" style="text-decoration: none; font-size: 16px;"><b>Linked List Debugger</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Visual Algorithm Tool</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An interactive, visual debugging environment for linked list operations to help developers understand memory management.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">JavaScript &bull; Data Structures</span>
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-numpy.svg" width="90" align="left" style="margin-right: 15px;" alt="Numpy">
-    <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 16px;"><b>CompostQA</b></a><br>
+    <a href="https://github.com/karthik5033/CompostQA" style="text-decoration: none; font-size: 16px;"><b>CompostQA</b></a>
+    <a href="https://compost-qa.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Precision ML for Soil Health</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Analytical predictive system mapping complex laboratory inputs to robust compost maturity insights via machine learning data layers.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Machine Learning &bull; Python</span>
   </td>
 </tr>
@@ -164,6 +172,7 @@ currently:
     <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 16px;"><b>MatterGen</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">AI &bull; Materials Science</span>
   </td>
   <td width="50%" valign="top">
@@ -171,6 +180,7 @@ currently:
     <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 16px;"><b>AvatarFlowX</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Generative AI &bull; Full Stack</span>
   </td>
 </tr>
@@ -180,13 +190,16 @@ currently:
     <a href="https://github.com/karthik5033/AstraSky" style="text-decoration: none; font-size: 16px;"><b>AstraSky</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Waste Ecosystem Simulation</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A policy simulation AI platform mapping waste ecosystems using satellite intelligence, predicting illegal dumping, and modeling emissions.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; AI</span>
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-html5.svg" width="90" align="left" style="margin-right: 15px;" alt="HTML5">
-    <a href="https://github.com/karthik5033/Super-Mario-Game" style="text-decoration: none; font-size: 16px;"><b>Super Mario</b></a><br>
+    <a href="https://github.com/karthik5033/Super-Mario-Game" style="text-decoration: none; font-size: 16px;"><b>Super Mario</b></a>
+    <a href="https://super-mario-game-eight.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Evolution of Computing Platformer</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A 2D platformer taking players on a journey through the evolution of computing with dynamically generated levels rendered on HTML5 Canvas.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; HTML5 Canvas</span>
   </td>
 </tr>
@@ -196,6 +209,7 @@ currently:
     <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Fairness Courtroom</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An adversarial, multi-agent AI courtroom pitting LLMs against model predictions to identify proxy variables and disparate impact.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; Generative AI</span>
   </td>
   <td width="50%" valign="top">
@@ -203,6 +217,7 @@ currently:
     <a href="https://github.com/karthik5033/multithreaded-file-scanner" style="text-decoration: none; font-size: 16px;"><b>Multithreaded Scanner</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">High-Performance Concurrency</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A high-performance concurrent file scanning utility built in C++ that leverages multithreading for rapid filesystem traversal and analysis.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">C++</span>
   </td>
 </tr>
@@ -240,6 +255,7 @@ currently:
     <b style="font-size: 16px; color: #FFD93D;">3rd Place — Space Tech National Hackathon</b><br>
     <span style="font-size: 13px; color: #c9d1d9;">Category: Solid Waste Management</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Secured 3rd place overall at the prestigious national-level space tech hackathon in Bengaluru.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">March 2026 &bull; Bengaluru</span>
   </td>
   <td width="50%" valign="top">
@@ -247,6 +263,7 @@ currently:
     <b style="font-size: 16px; color: #e3e4e5;">2nd Place — Algorithm Roulette</b><br>
     <span style="font-size: 13px; color: #c9d1d9;">Varnotsava National Level Hackathon</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Showcased exceptional DSA and algorithmic problem-solving skills to secure the runner-up position.</p>
+    <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">SMVITM</span>
   </td>
 </tr>
