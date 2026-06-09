@@ -196,7 +196,7 @@ currently:
     <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; AI</span>
   </td>
   <td width="50%" valign="top">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="90" align="left" style="margin-right: 15px;" alt="React">
+    <img src="./assets/icon-react.svg" width="90" align="left" style="margin-right: 15px;" alt="React">
     <a href="https://github.com/karthik5033/Super-Mario-Game" style="text-decoration: none; font-size: 16px;"><b>Super Mario</b></a>
     <a href="https://super-mario-game-eight.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Evolution of Computing Platformer</span><br>
@@ -215,7 +215,7 @@ currently:
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; Generative AI</span>
   </td>
   <td width="50%" valign="top">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Git">
+    <img src="./assets/icon-git.svg" width="90" align="left" style="margin-right: 15px;" alt="Git">
     <a href="https://github.com/karthik5033/multithreaded-file-scanner" style="text-decoration: none; font-size: 16px;"><b>Multithreaded Scanner</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">High-Performance Concurrency</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A high-performance concurrent file scanning utility built in C++ that leverages multithreading for rapid filesystem traversal and analysis.</p>
@@ -225,7 +225,7 @@ currently:
 </tr>
 <tr>
   <td width="50%" valign="top">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
+    <img src="./assets/icon-pytorch.svg" width="90" align="left" style="margin-right: 15px;" alt="PyTorch">
     <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 16px;"><b>FairLearn AI</b></a>
     <a href="https://fair-learn-ai.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Bias Mitigation</span><br>
@@ -234,7 +234,7 @@ currently:
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; AI Fairness</span>
   </td>
   <td width="50%" valign="top">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Node.js">
+    <img src="./assets/icon-nodejs.svg" width="90" align="left" style="margin-right: 15px;" alt="Node.js">
     <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 16px;"><b>AgriConnect</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Smart Farming Network</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A comprehensive ecosystem connecting farmers to market data, providing weather insights, and optimizing supply chain operations.</p>

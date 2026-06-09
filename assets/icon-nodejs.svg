@@ -1,0 +1,8 @@
+﻿<svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,3; 0,-3; 0,3" dur="2.2s" repeatCount="indefinite" />
+    <svg width="36" height="36" x="7" y="7">
+      System.Xml.XmlDocument
+    </svg>
+  </g>
+</svg>
