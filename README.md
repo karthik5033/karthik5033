@@ -189,7 +189,7 @@ currently:
   <td width="50%" valign="top">
     <img src="./assets/icon-typescript.svg" width="90" align="left" style="margin-right: 15px;" alt="TypeScript">
     <a href="https://github.com/karthik5033/AstraSky" style="text-decoration: none; font-size: 16px;"><b>AstraSky</b></a>
-    <a href="https://astra-sky.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
+    <a href="https://swm-digital-twin.vercel.app/"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Waste Ecosystem Simulation</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A policy simulation AI platform mapping waste ecosystems using satellite intelligence, predicting illegal dumping, and modeling emissions.</p>
     <div style="clear: both;"></div>
