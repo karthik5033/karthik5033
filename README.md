@@ -188,14 +188,15 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-typescript.svg" width="90" align="left" style="margin-right: 15px;" alt="TypeScript">
-    <a href="https://github.com/karthik5033/AstraSky" style="text-decoration: none; font-size: 16px;"><b>AstraSky</b></a><br>
+    <a href="https://github.com/karthik5033/AstraSky" style="text-decoration: none; font-size: 16px;"><b>AstraSky</b></a>
+    <a href="https://astra-sky.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Waste Ecosystem Simulation</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A policy simulation AI platform mapping waste ecosystems using satellite intelligence, predicting illegal dumping, and modeling emissions.</p>
     <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; AI</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-html5.svg" width="90" align="left" style="margin-right: 15px;" alt="HTML5">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="90" align="left" style="margin-right: 15px;" alt="React">
     <a href="https://github.com/karthik5033/Super-Mario-Game" style="text-decoration: none; font-size: 16px;"><b>Super Mario</b></a>
     <a href="https://super-mario-game-eight.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Evolution of Computing Platformer</span><br>
@@ -207,20 +208,38 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-python.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
-    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a>
-    <a href="https://fair-learn-ai.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
+    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Fairness Courtroom</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An adversarial, multi-agent AI courtroom pitting LLMs against model predictions to identify proxy variables and disparate impact.</p>
     <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; Generative AI</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-cpp.svg" width="90" align="left" style="margin-right: 15px;" alt="C++">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Git">
     <a href="https://github.com/karthik5033/multithreaded-file-scanner" style="text-decoration: none; font-size: 16px;"><b>Multithreaded Scanner</b></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">High-Performance Concurrency</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A high-performance concurrent file scanning utility built in C++ that leverages multithreading for rapid filesystem traversal and analysis.</p>
     <div style="clear: both;"></div>
     <span style="font-size: 11px; color: #58a6ff;">C++</span>
+  </td>
+</tr>
+<tr>
+  <td width="50%" valign="top">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
+    <a href="https://github.com/karthik5033/FairLearnAI" style="text-decoration: none; font-size: 16px;"><b>FairLearn AI</b></a>
+    <a href="https://fair-learn-ai.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">AI Bias Mitigation</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An advanced machine learning framework designed to evaluate, visualize, and mitigate bias in predictive models.</p>
+    <div style="clear: both;"></div>
+    <span style="font-size: 11px; color: #58a6ff;">Python &bull; AI Fairness</span>
+  </td>
+  <td width="50%" valign="top">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="90" align="left" style="margin-right: 15px;" alt="Node.js">
+    <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 16px;"><b>AgriConnect</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Smart Farming Network</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A comprehensive ecosystem connecting farmers to market data, providing weather insights, and optimizing supply chain operations.</p>
+    <div style="clear: both;"></div>
+    <span style="font-size: 11px; color: #58a6ff;">Full Stack &bull; IoT</span>
   </td>
 </tr>
 </table>
