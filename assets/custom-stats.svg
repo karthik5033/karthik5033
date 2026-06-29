@@ -54,12 +54,12 @@
         
       <!-- TypeScript -->
       <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3178c6" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="0" filter="drop-shadow(0 0 2px #3178c680)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 171.90795000443347 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 172.19069334325656 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
       </circle>
     
       <!-- Python -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-171.90795000443347" filter="drop-shadow(0 0 2px #3572A580)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 58.810614475200936 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-172.19069334325656" filter="drop-shadow(0 0 2px #3572A580)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 58.52787113637785 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
       </circle>
     
       <!-- JavaScript -->
@@ -87,13 +87,13 @@
       <g class="animate-item" style="animation-delay: 0ms">
         <rect x="230" y="75" width="12" height="12" rx="3" fill="#3178c6"/>
         <text x="255" y="85" class="term-key" style="font-size:12px;">TypeScript</text>
-        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">60.8%</text>
+        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">60.9%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 150ms">
         <rect x="230" y="103" width="12" height="12" rx="3" fill="#3572A5"/>
         <text x="255" y="113" class="term-key" style="font-size:12px;">Python</text>
-        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">20.8%</text>
+        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">20.7%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 300ms">
