@@ -59,21 +59,21 @@
     
       <!-- Python -->
       <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-171.6252066656104" filter="drop-shadow(0 0 2px #3572A580)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 61.07256118578559 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 61.35530452460866 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
       </circle>
     
       <!-- JavaScript -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#f1e05a" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-232.69776785139598" filter="drop-shadow(0 0 2px #f1e05a80)">
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#f1e05a" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-232.98051119021906" filter="drop-shadow(0 0 2px #f1e05a80)">
         <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 20.923007072908025 282.7433388230814" dur="1s" begin="0.3s" fill="freeze" />
       </circle>
     
       <!-- Jupyter Notebook -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#DA5B0B" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-253.62077492430402" filter="drop-shadow(0 0 2px #DA5B0B80)">
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#DA5B0B" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-253.9035182631271" filter="drop-shadow(0 0 2px #DA5B0B80)">
         <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 9.613273519984768 282.7433388230814" dur="1s" begin="0.44999999999999996s" fill="freeze" />
       </circle>
     
       <!-- CSS -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#663399" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-263.23404844428876" filter="drop-shadow(0 0 2px #66339980)">
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#663399" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-263.51679178311184" filter="drop-shadow(0 0 2px #66339980)">
         <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 8.765043503515523 282.7433388230814" dur="1s" begin="0.6s" fill="freeze" />
       </circle>
     
@@ -93,7 +93,7 @@
       <g class="animate-item" style="animation-delay: 150ms">
         <rect x="230" y="103" width="12" height="12" rx="3" fill="#3572A5"/>
         <text x="255" y="113" class="term-key" style="font-size:12px;">Python</text>
-        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">21.6%</text>
+        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">21.7%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 300ms">
