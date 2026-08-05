@@ -24,12 +24,12 @@ jobs:
       - name: Generate the Stats SVG
         run: node generate-stats.mjs
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in token from GitHub Actions!
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Generate Custom Trophies and Heatmap
         run: node generate-widgets.mjs
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Commit & Push the generated SVGs
         run: |
