@@ -170,7 +170,8 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-jenkins.svg" width="90" align="left" style="margin-right: 15px;" alt="Jenkins">
-    <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 16px;"><b>MatterGen</b></a><br>
+    <a href="https://github.com/karthik5033/MatterGen" style="text-decoration: none; font-size: 16px;"><b>MatterGen</b></a>
+    <a href="https://material-science-el.vercel.app"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Discover Novel Stable Crystals</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Framework accelerating novel stable crystalline structure discovery, massively improving testing workflows through generative architecture.</p>
     <div style="clear: both;"></div>
@@ -208,7 +209,8 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-python.svg" width="90" align="left" style="margin-right: 15px;" alt="Python">
-    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a><br>
+    <a href="https://github.com/karthik5033/Cephus" style="text-decoration: none; font-size: 16px;"><b>Trial AI</b></a>
+    <a href="https://cephus-new.vercel.app/"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">AI Fairness Courtroom</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An adversarial, multi-agent AI courtroom pitting LLMs against model predictions to identify proxy variables and disparate impact.</p>
     <div style="clear: both;"></div>
@@ -234,12 +236,13 @@ currently:
     <span style="font-size: 11px; color: #58a6ff;">Python &bull; AI Fairness</span>
   </td>
   <td width="50%" valign="top">
-    <img src="./assets/icon-nodejs.svg" width="90" align="left" style="margin-right: 15px;" alt="Node.js">
-    <a href="https://github.com/karthik5033/AgriConnect" style="text-decoration: none; font-size: 16px;"><b>AgriConnect</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">Smart Farming Network</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A comprehensive ecosystem connecting farmers to market data, providing weather insights, and optimizing supply chain operations.</p>
+    <img src="./assets/icon-react.svg" width="90" align="left" style="margin-right: 15px;" alt="React">
+    <a href="https://github.com/karthik5033/CrimeIntel" style="text-decoration: none; font-size: 16px;"><b>CrimeIntel</b></a>
+    <a href="https://crimeintel-60078981781.development.project-rainfall-60078981781.catalyst.zoho.com/"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Police Intelligence Platform</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">An enterprise-grade intelligence dashboard and case management software designed for law enforcement to track suspects and analyze crime.</p>
     <div style="clear: both;"></div>
-    <span style="font-size: 11px; color: #58a6ff;">Full Stack &bull; IoT</span>
+    <span style="font-size: 11px; color: #58a6ff;">Next.js &bull; Full Stack</span>
   </td>
 </tr>
 </table>
