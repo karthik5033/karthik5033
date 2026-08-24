@@ -130,7 +130,8 @@ currently:
 <tr>
   <td width="50%" valign="top">
     <img src="./assets/icon-typescript.svg" width="90" align="left" style="margin-right: 15px;" alt="TypeScript">
-    <a href="https://github.com/karthik5033/ClickWise" style="text-decoration: none; font-size: 16px;"><b>ClickWise</b></a><br>
+    <a href="https://github.com/karthik5033/ClickWise" style="text-decoration: none; font-size: 16px;"><b>ClickWise</b></a>
+    <a href="https://click-wise.vercel.app/"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Real-time Security Platform</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A multi-layered real-time security platform combining Machine Learning, Heuristic Analysis, LLM Verification, and Behavioral Monitoring to protect users from phishing, social engineering, and malicious websites.</p>
     <div style="clear: both;"></div>
@@ -179,7 +180,8 @@ currently:
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-prisma.svg" width="90" align="left" style="margin-right: 15px;" alt="Prisma">
-    <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 16px;"><b>AvatarFlowX</b></a><br>
+    <a href="https://github.com/karthik5033/CodeRed-Blue-t30" style="text-decoration: none; font-size: 16px;"><b>AvatarFlowX</b></a>
+    <a href="https://avtarflow-x-ten.vercel.app/"><img src="https://img.shields.io/badge/🌐_Visit_Live_App-FFD93D?style=for-the-badge" alt="Visit Live App" style="vertical-align: middle; margin-left: 8px; height: 20px; border-radius: 4px;"/></a><br>
     <span style="font-size: 13px; color: #c9d1d9;">Draw Flowcharts → AI Generates Web Apps</span><br>
     <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Fully-autonomous generative pipeline translating raw user-drawn application flowcharts into functional, production-ready web apps.</p>
     <div style="clear: both;"></div>
