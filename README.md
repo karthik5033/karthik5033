@@ -129,12 +129,12 @@ currently:
 
 <tr>
   <td width="50%" valign="top">
-    <img src="./assets/icon-pandas.svg" width="90" align="left" style="margin-right: 15px;" alt="Pandas">
-    <a href="https://github.com/karthik5033/Phishing-detector" style="text-decoration: none; font-size: 16px;"><b>Secure-Sentinel</b></a><br>
-    <span style="font-size: 13px; color: #c9d1d9;">AI-Powered Threat Prediction</span><br>
-    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">Comprehensive real-time browser extension that leverages fast supervised ML inference to instantly neutralize malicious domains.</p>
+    <img src="./assets/icon-typescript.svg" width="90" align="left" style="margin-right: 15px;" alt="TypeScript">
+    <a href="https://github.com/karthik5033/ClickWise" style="text-decoration: none; font-size: 16px;"><b>ClickWise</b></a><br>
+    <span style="font-size: 13px; color: #c9d1d9;">Real-time Security Platform</span><br>
+    <p style="font-size: 12px; color: #8b949e; margin: 6px 0;">A multi-layered real-time security platform combining Machine Learning, Heuristic Analysis, LLM Verification, and Behavioral Monitoring to protect users from phishing, social engineering, and malicious websites.</p>
     <div style="clear: both;"></div>
-    <span style="font-size: 11px; color: #58a6ff;">Python &bull; FastAPI &bull; Scikit-learn</span>
+    <span style="font-size: 11px; color: #58a6ff;">TypeScript &bull; Python &bull; JavaScript</span>
   </td>
   <td width="50%" valign="top">
     <img src="./assets/icon-tensorflow.svg" width="90" align="left" style="margin-right: 15px;" alt="TensorFlow">
