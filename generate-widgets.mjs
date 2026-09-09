@@ -408,8 +408,12 @@ async function fetchAndSave(url, filename) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const svg = await res.text();
-    fs.writeFileSync(path.join(__dirname, "assets", filename), svg);
-    console.log(`✅ Successfully downloaded ${filename}`);
+    if (svg.includes("<svg")) {
+      fs.writeFileSync(path.join(__dirname, "assets", filename), svg);
+      console.log(`✅ Successfully downloaded ${filename}`);
+    } else {
+      console.warn(`⚠️ Downloaded content for ${filename} is not valid SVG, skipping write.`);
+    }
   } catch (err) {
     console.error(`❌ Failed to fetch ${filename}:`, err);
   }
@@ -555,7 +559,7 @@ async function run() {
   fs.writeFileSync(path.join(assetsDir, "custom-activity.svg"), activitySVG);
   console.log("✅ Successfully generated custom-activity.svg (local)");
 
-  const streakUrl = `https://github-readme-streak-stats.herokuapp.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
+  const streakUrl = `https://streak-stats.demolab.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
   await fetchAndSave(streakUrl, "custom-streak.svg");
 
   await generateAnimatedIcons(assetsDir);

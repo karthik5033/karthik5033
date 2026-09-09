@@ -3,7 +3,7 @@ const fs = require('fs');
 const fullReadme = `<div align="center">
 
 <!-- ANIMATED HEADER -->
-<img src="./assets/prof.gif" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
+<img src="./assets/test_cropped_basic.gif" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
 
 
 

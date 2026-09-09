@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ANIMATED HEADER -->
-<img src="./assets/prof.gif" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
+<img src="./assets/test_cropped_basic.gif" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
 
 
 
@@ -380,7 +380,7 @@ currently:
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="./assets/custom-streak.svg?v=1784687362847" width="70%"/>
+<img src="./assets/custom-streak.svg?v=1788940275059" width="70%"/>
 
 <br/><br/>
 
