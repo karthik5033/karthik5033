@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- ANIMATED HEADER -->
-<img src="./assets/test_cropped_basic.gif" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
+<img src="./assets/test_cropped_basic.gif?v=2" alt="Karthik - Full Stack Developer & AI Enthusiast" width="100%" style="border-radius: 10px;"/>
 
 
 
