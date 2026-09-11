@@ -54,17 +54,17 @@
         
       <!-- Python -->
       <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3572A5" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="0" filter="drop-shadow(0 0 2px #3572A580)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 180.10750683030284 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 179.82476349147976 282.7433388230814" dur="1s" begin="0s" fill="freeze" />
       </circle>
     
       <!-- TypeScript -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3178c6" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-180.10750683030284" filter="drop-shadow(0 0 2px #3178c680)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 77.47167483752429 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#3178c6" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-179.82476349147976" filter="drop-shadow(0 0 2px #3178c680)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 78.03716151517047 282.7433388230814" dur="1s" begin="0.15s" fill="freeze" />
       </circle>
     
       <!-- HTML -->
-      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#e34c26" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-257.57918166782713" filter="drop-shadow(0 0 2px #e34c2680)">
-        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 9.613273519984768 282.7433388230814" dur="1s" begin="0.3s" fill="freeze" />
+      <circle cx="0" cy="0" r="45" fill="transparent" stroke="#e34c26" stroke-width="14" stroke-dasharray="0 282.7433388230814" stroke-dashoffset="-257.8619250066502" filter="drop-shadow(0 0 2px #e34c2680)">
+        <animate attributeName="stroke-dasharray" values="0 282.7433388230814; 9.330530181161686 282.7433388230814" dur="1s" begin="0.3s" fill="freeze" />
       </circle>
     
       <!-- JavaScript -->
@@ -87,19 +87,19 @@
       <g class="animate-item" style="animation-delay: 0ms">
         <rect x="230" y="75" width="12" height="12" rx="3" fill="#3572A5"/>
         <text x="255" y="85" class="term-key" style="font-size:12px;">Python</text>
-        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">63.7%</text>
+        <text x="395" y="85" class="term-num" style="font-size:12px;" text-anchor="end">63.6%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 150ms">
         <rect x="230" y="103" width="12" height="12" rx="3" fill="#3178c6"/>
         <text x="255" y="113" class="term-key" style="font-size:12px;">TypeScript</text>
-        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">27.4%</text>
+        <text x="395" y="113" class="term-num" style="font-size:12px;" text-anchor="end">27.6%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 300ms">
         <rect x="230" y="131" width="12" height="12" rx="3" fill="#e34c26"/>
         <text x="255" y="141" class="term-key" style="font-size:12px;">HTML</text>
-        <text x="395" y="141" class="term-num" style="font-size:12px;" text-anchor="end">3.4%</text>
+        <text x="395" y="141" class="term-num" style="font-size:12px;" text-anchor="end">3.3%</text>
       </g>
     
       <g class="animate-item" style="animation-delay: 450ms">
