@@ -403,19 +403,204 @@ function generateDividerSVG() {
   `;
 }
 
-async function fetchAndSave(url, filename) {
+// Generates a local fallback streak SVG matching the Radical theme
+function generateLocalStreakSVG(user, existingStreakFile) {
+  let prevTotal = 1768;
+  let prevLongest = 100;
+  let prevLongestRange = "Jan 11 - Apr 20";
+  let prevTotalRange = "Sep 20, 2024 - Present";
+
+  if (existingStreakFile && !existingStreakFile.includes("Failed to retrieve")) {
+    const totalMatch = existingStreakFile.match(/Total Contributions[\s\S]*?(\d[\d,]+)/);
+    if (totalMatch) prevTotal = parseInt(totalMatch[1].replace(/,/g, ""), 10) || prevTotal;
+    const longestMatch = existingStreakFile.match(/Longest Streak[\s\S]*?(\d+)/);
+    if (longestMatch) prevLongest = parseInt(longestMatch[1], 10) || prevLongest;
+    const longestRangeMatch = existingStreakFile.match(/Longest Streak[\s\S]*?<text[^>]*>([A-Za-z0-9,\s\-]+)<\/text>/);
+    if (longestRangeMatch) prevLongestRange = longestRangeMatch[1].trim() || prevLongestRange;
+  }
+
+  const calendar = user?.contributionsCollection?.contributionCalendar;
+  const weeks = calendar?.weeks || [];
+  const days = [];
+  for (const w of weeks) {
+    if (w.contributionDays) {
+      days.push(...w.contributionDays);
+    }
+  }
+  days.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  let currentStreak = 0;
+  let streakStart = null;
+  let streakEnd = null;
+  if (days.length > 0) {
+    let idx = days.length - 1;
+    if (days[idx].contributionCount === 0 && idx > 0) {
+      idx--;
+    }
+    while (idx >= 0 && days[idx].contributionCount > 0) {
+      if (!streakEnd) streakEnd = days[idx].date;
+      streakStart = days[idx].date;
+      currentStreak++;
+      idx--;
+    }
+  }
+
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const fmt = (dStr) => {
+    if (!dStr) return "";
+    const d = new Date(dStr);
+    return `${months[d.getUTCMonth()]} ${d.getUTCDate()}`;
+  };
+
+  const currentRange = (streakStart && streakEnd) ? `${fmt(streakStart)} - ${fmt(streakEnd)}` : "Recent";
+  const totalCount = calendar?.totalContributions || prevTotal;
+
+  return `<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+                style='isolation: isolate' viewBox='0 0 495 195' width='495px' height='195px' direction='ltr'>
+        <style>
+            @keyframes currstreak {
+                0% { font-size: 3px; opacity: 0.2; }
+                80% { font-size: 34px; opacity: 1; }
+                100% { font-size: 28px; opacity: 1; }
+            }
+            @keyframes fadein {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        </style>
+        <defs>
+            <clipPath id='outer_rectangle'>
+                <rect width='495' height='195' rx='4.5'/>
+            </clipPath>
+            <mask id='mask_out_ring_behind_fire'>
+                <rect width='495' height='195' fill='white'/>
+                <ellipse id='mask-ellipse' cx='247.5' cy='32' rx='13' ry='18' fill='black'/>
+            </mask>
+        </defs>
+        <g clip-path='url(#outer_rectangle)'>
+            <g style='isolation: isolate'>
+                <rect stroke='#000000' stroke-opacity='0' fill='#0d1117' rx='4.5' x='0.5' y='0.5' width='494' height='194'/>
+            </g>
+            <g style='isolation: isolate'>
+                <line x1='165' y1='28' x2='165' y2='170' vector-effect='non-scaling-stroke' stroke-width='1' stroke='#ffd93d' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/>
+                <line x1='330' y1='28' x2='330' y2='170' vector-effect='non-scaling-stroke' stroke-width='1' stroke='#ffd93d' stroke-linejoin='miter' stroke-linecap='square' stroke-miterlimit='3'/>
+            </g>
+            <g style='isolation: isolate'>
+                <!-- Total Contributions big number -->
+                <g transform='translate(82.5, 48)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffffff' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 0.6s'>
+                        ${totalCount.toLocaleString()}
+                    </text>
+                </g>
+                <!-- Total Contributions label -->
+                <g transform='translate(82.5, 84)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffd93d' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='14px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 0.7s'>
+                        Total Contributions
+                    </text>
+                </g>
+                <!-- Total Contributions range -->
+                <g transform='translate(82.5, 114)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#8b949e' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 0.8s'>
+                        ${prevTotalRange}
+                    </text>
+                </g>
+            </g>
+            <g style='isolation: isolate'>
+                <!-- Current Streak label -->
+                <g transform='translate(247.5, 108)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffd93d' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='14px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 0.9s'>
+                        Current Streak
+                    </text>
+                </g>
+                <!-- Current Streak range -->
+                <g transform='translate(247.5, 145)'>
+                    <text x='0' y='21' stroke-width='0' text-anchor='middle' fill='#8b949e' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 0.9s'>
+                        ${currentRange}
+                    </text>
+                </g>
+                <!-- Ring around number -->
+                <g mask='url(#mask_out_ring_behind_fire)'>
+                    <circle cx='247.5' cy='71' r='40' fill='none' stroke='#ffd93d' stroke-width='5' style='opacity: 0; animation: fadein 0.5s linear forwards 0.4s'></circle>
+                </g>
+                <!-- Fire icon -->
+                <g transform='translate(247.5, 19.5)' stroke-opacity='0' style='opacity: 0; animation: fadein 0.5s linear forwards 0.6s'>
+                    <path d='M -12 -0.5 L 15 -0.5 L 15 23.5 L -12 23.5 L -12 -0.5 Z' fill='none'/>
+                    <path d='M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2 C -3.23 9.2 -4.79 7.53 -4.79 5.47 L -4.76 5.11 C -6.78 7.51 -8 10.62 -8 13.99 C -8 18.41 -4.42 22 0 22 C 4.42 22 8 18.41 8 13.99 C 8 8.6 5.41 3.79 1.5 0.67 Z M -0.29 19 C -2.07 19 -3.51 17.6 -3.51 15.86 C -3.51 14.24 -2.46 13.1 -0.7 12.74 C 1.07 12.38 2.9 11.53 3.92 10.16 C 4.31 11.45 4.51 12.81 4.51 14.2 C 4.51 16.85 2.36 19 -0.29 19 Z' fill='#ffa726' stroke-opacity='0'/>
+                </g>
+                <!-- Current Streak big number -->
+                <g transform='translate(247.5, 48)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffffff' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' font-style='normal' style='animation: currstreak 0.6s linear forwards'>
+                        ${currentStreak}
+                    </text>
+                </g>
+            </g>
+            <g style='isolation: isolate'>
+                <!-- Longest Streak big number -->
+                <g transform='translate(412.5, 48)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffffff' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='700' font-size='28px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 1.2s'>
+                        ${prevLongest}
+                    </text>
+                </g>
+                <!-- Longest Streak label -->
+                <g transform='translate(412.5, 84)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#ffd93d' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='14px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 1.3s'>
+                        Longest Streak
+                    </text>
+                </g>
+                <!-- Longest Streak range -->
+                <g transform='translate(412.5, 114)'>
+                    <text x='0' y='32' stroke-width='0' text-anchor='middle' fill='#8b949e' stroke='none' font-family='"Segoe UI", Ubuntu, sans-serif' font-weight='400' font-size='12px' font-style='normal' style='opacity: 0; animation: fadein 0.5s linear forwards 1.4s'>
+                        ${prevLongestRange}
+                    </text>
+                </g>
+            </g>
+        </g>
+    </svg>`;
+}
+
+async function updateStreakSVG(user, assetsDir) {
+  const streakPath = path.join(assetsDir, "custom-streak.svg");
+  let existingContent = "";
+  if (fs.existsSync(streakPath)) {
+    existingContent = fs.readFileSync(streakPath, "utf8");
+  }
+
+  const streakUrl = `https://streak-stats.demolab.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
+
+  let downloadedValid = false;
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const svg = await res.text();
-    if (svg.includes("<svg")) {
-      fs.writeFileSync(path.join(__dirname, "assets", filename), svg);
-      console.log(`✅ Successfully downloaded ${filename}`);
-    } else {
-      console.warn(`⚠️ Downloaded content for ${filename} is not valid SVG, skipping write.`);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const res = await fetch(streakUrl, { signal: controller.signal });
+    clearTimeout(timeout);
+    if (res.ok) {
+      const svg = await res.text();
+      const isError = svg.includes("Failed to retrieve") || 
+                      svg.includes("API issue") || 
+                      svg.includes("cut-off-area") ||
+                      !svg.includes("Total Contributions") || 
+                      !svg.includes("Current Streak");
+      if (!isError && svg.includes("<svg")) {
+        fs.writeFileSync(streakPath, svg);
+        console.log("✅ Successfully downloaded custom-streak.svg from streak-stats");
+        downloadedValid = true;
+      } else {
+        console.warn("⚠️ Streak API returned error SVG. Preventing overwrite.");
+      }
     }
   } catch (err) {
-    console.error(`❌ Failed to fetch ${filename}:`, err);
+    console.warn("⚠️ Failed to fetch streak SVG:", err.message);
+  }
+
+  if (!downloadedValid) {
+    if (!existingContent || existingContent.includes("Failed to retrieve") || existingContent.includes("API issue")) {
+      console.log("⚙️ Generating fallback local custom-streak.svg...");
+      const localSvg = generateLocalStreakSVG(user, existingContent);
+      fs.writeFileSync(streakPath, localSvg);
+      console.log("✅ Successfully generated local custom-streak.svg fallback");
+    } else {
+      console.log("ℹ️ Preserving existing valid custom-streak.svg");
+    }
   }
 }
 
@@ -559,8 +744,7 @@ async function run() {
   fs.writeFileSync(path.join(assetsDir, "custom-activity.svg"), activitySVG);
   console.log("✅ Successfully generated custom-activity.svg (local)");
 
-  const streakUrl = `https://streak-stats.demolab.com?user=${USERNAME}&theme=radical&hide_border=true&background=0D1117&stroke=FFD93D&ring=FFD93D&fire=FFA726&currStreakLabel=FFD93D&sideLabels=FFD93D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=8B949E&cache_bust=${Date.now()}`;
-  await fetchAndSave(streakUrl, "custom-streak.svg");
+  await updateStreakSVG(user, assetsDir);
 
   await generateAnimatedIcons(assetsDir);
 }

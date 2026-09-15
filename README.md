@@ -380,7 +380,7 @@ currently:
 <br/><br/>
 
 <!-- STREAK STATS -->
-<img src="./assets/custom-streak.svg?v=1789442760817" width="70%"/>
+<img src="./assets/custom-streak.svg?v=1789498437708" width="70%"/>
 
 <br/><br/>
 
